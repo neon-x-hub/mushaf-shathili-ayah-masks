@@ -1,0 +1,39 @@
+# Mushaf Source PDF (download separately from Internet Archive: https://archive.org/details/ALSHTTTTTTTTTTTTTTTTTTTTTARSH/mode/2up)
+*.pdf
+ALSHAZLY__ALGZAER__WARSH.pdf
+
+# Generated Visual Overlays (batch generated via generate_all_overlays.py)
+output/overlays/
+output/overlays/*
+
+# Legacy and scratch files
+archive/
+scratch/
+scratch_*
+*.tmp
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
