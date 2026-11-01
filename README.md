@@ -4,8 +4,17 @@ High-precision bounding polygons, line segments, verse markers, and ready-to-ren
 
 Designed for frictionless integration into Quran mobile apps (**Flutter**, **Android/Kotlin**, **iOS/Swift**) and web apps (**React**, **Vue**, **SVG/Canvas**).
 
-> **Source Mushaf:** The original PDF scan is hosted on the Internet Archive:  
+> **Source Mushaf:** The original PDF scan is hosted on the Internet Archive:
 > 🔗 **[Internet Archive: مصحف الشاذلي الجزائري برواية ورش عن نافع](https://archive.org/details/ALSHTTTTTTTTTTTTTTTTTTTTTARSH/mode/2up)**
+
+---
+
+## Visual Verification Examples
+
+| **Page 001: Ornamental Opening Frame** | **Page 092: Embedded Thumun (1/8 Hizb)** | **Page 598: Multiple Surah Headers** |
+| :---: | :---: | :---: |
+| <img src="docs/assets/001.jpg" alt="Page 001: Special opening page with custom 7-line layout and ornamental header" width="250"/> | <img src="docs/assets/092.jpg" alt="Page 092: Thumun marker detected in cyan and merged inside continuous Ayah" width="250"/> | <img src="docs/assets/598.jpg" alt="Page 598: Multiple Surah headers and Basmalas cleanly segmented" width="250"/> |
+| *Special 7-line decorative layout, custom rosette markers, top gold header, and isolated emerald Basmala.* | *Hollow Thumun marker (cyan 'TH') distinguished from numbered verse rings and merged into parent verse without splitting.* | *Multiple consecutive Surah headers (gold), separate Basmalas (green), and short Surahs in Juz 'Amma.* |
 
 ---
 
