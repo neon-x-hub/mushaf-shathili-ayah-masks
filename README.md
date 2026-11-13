@@ -48,12 +48,28 @@ Designed for frictionless integration into Quran mobile apps (**Flutter**, **And
 
 ---
 
+## 📦 Downloads & Releases (v2.0.0)
+
+Pre-built dataset archives and the source high-resolution Mushaf PDF scan are available on GitHub Releases:
+
+| Asset | Format / Size | Description | Download Link |
+| :--- | :--- | :--- | :--- |
+| **`mushaf_ayah_masks.json.gz`** | Gzip JSON (~926 KB / ~15.7 MB uncompressed) | Complete consolidated dataset of all 606 pages, including all verse bounding boxes, segments, markers, and SVG paths. | [**Download (.gz)**](https://github.com/neon-x-hub/mushaf-shathili-ayah-masks/releases/download/v2.0.0/mushaf_ayah_masks.json.gz) |
+| **`surah_ayah_mapping.json.gz`** | Gzip JSON (~888 KB / ~16.8 MB uncompressed) | Hierarchical Surah-indexed dataset (Surahs 1–114) tagged with canonical Kufi verification. | [**Download (.gz)**](https://github.com/neon-x-hub/mushaf-shathili-ayah-masks/releases/download/v2.0.0/surah_ayah_mapping.json.gz) |
+| **`pages.zip`** | Zip Archive (~1.6 MB) | All 606 individual `output/pages/{page_num}.json` files bundled into a single archive. | [**Download (.zip)**](https://github.com/neon-x-hub/mushaf-shathili-ayah-masks/releases/download/v2.0.0/pages.zip) |
+| **`Mushaf-Ashathili.pdf`** | PDF Scan (1488 × 2207) | Official high-resolution source scan of the Al-Shazly Warsh Mushaf. | [**neon-x-hub/mushaf-shathili Releases**](https://github.com/neon-x-hub/mushaf-shathili/releases) |
+
+> 💡 **Repository vs. Release Downloads:**
+> - **Individual Pages (`output/pages/*.json`)**: All 606 per-page JSON files are tracked directly in this git repository, allowing web and mobile apps to fetch or stream individual pages on demand via raw GitHub CDN URLs (e.g. `https://raw.githubusercontent.com/neon-x-hub/mushaf-shathili-ayah-masks/main/output/pages/071.json`).
+> - **Full Collective Datasets**: For bulk processing, offline database seeding, or full local sync, download the release archives above or visit the [v2.0.0 GitHub Release page](https://github.com/neon-x-hub/mushaf-shathili-ayah-masks/releases/tag/v2.0.0).
+
+---
+
 ## Repository Structure
 
 ```text
 shathili-mushaf/
-├── Mushaf-Ashathili.pdf                # Primary High-Resolution Mushaf PDF (1488 × 2207)
-├── ALSHAZLY__ALGZAER__WARSH.pdf        # Legacy Mushaf PDF (621 × 878)
+├── Mushaf-Ashathili.pdf                # Primary High-Resolution Mushaf PDF (Download from upstream releases)
 ├── assets/
 │   ├── template_ring_new.png           # High-res Ayah marker template (71 × 72)
 │   ├── template_ring_hollow_bitmask_new.png # High-res bitmask for Thumun marker detection
@@ -65,16 +81,17 @@ shathili-mushaf/
 ├── map_surah_ayahs.py                  # Generates Surah-to-Ayah mapping & tags every Ayah
 ├── check_surah_ayah_counts.py          # Verification CLI: tests all 114 Surahs against canonical counts
 ├── generate_all_overlays.py            # Generates visual debug JPEG overlays for all pages
+├── package_release.py                  # Packages release archives (.json.gz, pages.zip) for GitHub Releases
 ├── viewer.html                         # Interactive HTML/SVG demo viewer (zero-dependency)
 ├── output/
-│   ├── pages/                          # Per-page JSON files (000.json to 605.json)
+│   ├── pages/                          # Per-page JSON files (000.json to 605.json) [tracked in git]
 │   │   ├── 000.json
 │   │   ├── ...
 │   │   ├── 071.json
 │   │   └── 605.json
 │   ├── overlays/                       # Visual verification JPEG overlays (000.jpg to 605.jpg)
-│   ├── mushaf_ayah_masks.json          # Consolidated single dataset (~15.7 MB, ~1.2 MB gzipped)
-│   ├── surah_ayah_mapping.json         # Standalone Surah-to-Ayah hierarchical dataset (~16.8 MB)
+│   ├── mushaf_ayah_masks.json          # Consolidated single dataset [download from Releases]
+│   ├── surah_ayah_mapping.json         # Standalone Surah-to-Ayah hierarchical dataset [download from Releases]
 │   └── mushaf-masks.d.ts               # TypeScript type definitions
 └── README.md                           # Documentation & integration guides
 ```
