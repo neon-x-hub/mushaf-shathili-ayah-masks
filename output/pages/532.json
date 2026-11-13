@@ -1,19 +1,19 @@
 {
   "page_number": 532,
   "dimensions": {
-    "width": 621,
-    "height": 878
+    "width": 1488,
+    "height": 2207
   },
   "content_bounds": {
-    "x_min": 31,
-    "y_min": 24,
-    "x_max": 591,
-    "y_max": 853,
+    "x_min": 46,
+    "y_min": 46,
+    "x_max": 1442,
+    "y_max": 2161,
     "normalized": {
-      "x_min": 0.05,
-      "y_min": 0.028,
-      "x_max": 0.952,
-      "y_max": 0.972
+      "x_min": 0.0309,
+      "y_min": 0.0208,
+      "x_max": 0.9691,
+      "y_max": 0.9792
     }
   },
   "lines_count": 15,
@@ -41,57 +41,53 @@
           "line": 1,
           "start_pct": 100.0,
           "end_pct": 12.679,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.1643,
-          "y_top_norm": 0.0273,
-          "y_bottom_norm": 0.09,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.1499,
+          "y_top_norm": 0.0208,
+          "y_bottom_norm": 0.0847,
           "pixel_rect": [
-            102,
-            24,
-            591,
-            79
+            223,
+            46,
+            1442,
+            187
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            102,
-            24
+            223,
+            46
           ],
           [
-            591,
-            24
+            1442,
+            46
           ],
           [
-            591,
-            79
+            1442,
+            187
           ],
           [
-            102,
-            79
+            223,
+            187
           ]
         ]
       ],
-      "svg_path": "M 102 24 L 591 24 L 591 79 L 102 79 Z",
-      "normalized_svg_path": "M 0.1643 0.0273 L 0.9517 0.0273 L 0.9517 0.0900 L 0.1643 0.0900 Z",
+      "svg_path": "M 223 46 L 1442 46 L 1442 187 L 223 187 Z",
+      "normalized_svg_path": "M 0.1499 0.0208 L 0.9691 0.0208 L 0.9691 0.0847 L 0.1499 0.0847 Z",
       "marker": {
-        "cx": 119,
-        "cy": 45,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.1916,
-        "cy_norm": 0.0513,
+        "cx": 258,
+        "cy": 123,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.1734,
+        "cy_norm": 0.0557,
         "line": 1,
-        "score": 0.7367,
+        "score": 0.8152,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 41,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 2,
@@ -102,97 +98,93 @@
       "thumun_marker": null,
       "compact_polygons": [
         "12.679%",
-        "61.071%"
+        "62.106%"
       ],
       "segments": [
         {
           "line": 1,
           "start_pct": 12.679,
           "end_pct": 0.0,
-          "x_right_norm": 0.1643,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.0273,
-          "y_bottom_norm": 0.09,
+          "x_right_norm": 0.1499,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.0208,
+          "y_bottom_norm": 0.0847,
           "pixel_rect": [
-            31,
-            24,
-            102,
-            79
+            46,
+            46,
+            223,
+            187
           ]
         },
         {
           "line": 2,
           "start_pct": 100.0,
-          "end_pct": 61.071,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.6006,
-          "y_top_norm": 0.09,
-          "y_bottom_norm": 0.1526,
+          "end_pct": 62.106,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.6136,
+          "y_top_norm": 0.0847,
+          "y_bottom_norm": 0.1486,
           "pixel_rect": [
-            373,
-            79,
-            591,
-            134
+            913,
+            187,
+            1442,
+            328
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            24
+            46,
+            46
           ],
           [
-            102,
-            24
+            223,
+            46
           ],
           [
-            102,
-            79
+            223,
+            187
           ],
           [
-            31,
-            79
+            46,
+            187
           ]
         ],
         [
           [
-            373,
-            79
+            913,
+            187
           ],
           [
-            591,
-            79
+            1442,
+            187
           ],
           [
-            591,
-            134
+            1442,
+            328
           ],
           [
-            373,
-            134
+            913,
+            328
           ]
         ]
       ],
-      "svg_path": "M 31 24 L 102 24 L 102 79 L 31 79 Z M 373 79 L 591 79 L 591 134 L 373 134 Z",
-      "normalized_svg_path": "M 0.0499 0.0273 L 0.1643 0.0273 L 0.1643 0.0900 L 0.0499 0.0900 Z M 0.6006 0.0900 L 0.9517 0.0900 L 0.9517 0.1526 L 0.6006 0.1526 Z",
+      "svg_path": "M 46 46 L 223 46 L 223 187 L 46 187 Z M 913 187 L 1442 187 L 1442 328 L 913 328 Z",
+      "normalized_svg_path": "M 0.0309 0.0208 L 0.1499 0.0208 L 0.1499 0.0847 L 0.0309 0.0847 Z M 0.6136 0.0847 L 0.9691 0.0847 L 0.9691 0.1486 L 0.6136 0.1486 Z",
       "marker": {
-        "cx": 390,
-        "cy": 99,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.628,
-        "cy_norm": 0.1128,
+        "cx": 948,
+        "cy": 259,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.6371,
+        "cy_norm": 0.1174,
         "line": 2,
-        "score": 0.7389,
+        "score": 0.8084,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 42,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 3,
@@ -202,64 +194,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "61.071%"
+        "62.106%"
       ],
       "segments": [
         {
           "line": 2,
-          "start_pct": 61.071,
+          "start_pct": 62.106,
           "end_pct": 0.0,
-          "x_right_norm": 0.6006,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.09,
-          "y_bottom_norm": 0.1526,
+          "x_right_norm": 0.6136,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.0847,
+          "y_bottom_norm": 0.1486,
           "pixel_rect": [
-            31,
-            79,
-            373,
-            134
+            46,
+            187,
+            913,
+            328
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            79
+            46,
+            187
           ],
           [
-            373,
-            79
+            913,
+            187
           ],
           [
-            373,
-            134
+            913,
+            328
           ],
           [
-            31,
-            134
+            46,
+            328
           ]
         ]
       ],
-      "svg_path": "M 31 79 L 373 79 L 373 134 L 31 134 Z",
-      "normalized_svg_path": "M 0.0499 0.0900 L 0.6006 0.0900 L 0.6006 0.1526 L 0.0499 0.1526 Z",
+      "svg_path": "M 46 187 L 913 187 L 913 328 L 46 328 Z",
+      "normalized_svg_path": "M 0.0309 0.0847 L 0.6136 0.0847 L 0.6136 0.1486 L 0.0309 0.1486 Z",
       "marker": {
-        "cx": 56,
-        "cy": 98,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.0902,
-        "cy_norm": 0.1116,
+        "cx": 99,
+        "cy": 256,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.0665,
+        "cy_norm": 0.116,
         "line": 2,
-        "score": 0.7751,
+        "score": 0.8641,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 43,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 4,
@@ -269,64 +257,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "49.464%"
+        "50.287%"
       ],
       "segments": [
         {
           "line": 3,
           "start_pct": 100.0,
-          "end_pct": 49.464,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.496,
-          "y_top_norm": 0.1526,
-          "y_bottom_norm": 0.2153,
+          "end_pct": 50.287,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.5027,
+          "y_top_norm": 0.1486,
+          "y_bottom_norm": 0.2125,
           "pixel_rect": [
-            308,
-            134,
-            591,
-            189
+            748,
+            328,
+            1442,
+            469
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            308,
-            134
+            748,
+            328
           ],
           [
-            591,
-            134
+            1442,
+            328
           ],
           [
-            591,
-            189
+            1442,
+            469
           ],
           [
-            308,
-            189
+            748,
+            469
           ]
         ]
       ],
-      "svg_path": "M 308 134 L 591 134 L 591 189 L 308 189 Z",
-      "normalized_svg_path": "M 0.4960 0.1526 L 0.9517 0.1526 L 0.9517 0.2153 L 0.4960 0.2153 Z",
+      "svg_path": "M 748 328 L 1442 328 L 1442 469 L 748 469 Z",
+      "normalized_svg_path": "M 0.5027 0.1486 L 0.9691 0.1486 L 0.9691 0.2125 L 0.5027 0.2125 Z",
       "marker": {
-        "cx": 325,
-        "cy": 154,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.5233,
-        "cy_norm": 0.1754,
+        "cx": 783,
+        "cy": 397,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.5262,
+        "cy_norm": 0.1799,
         "line": 3,
-        "score": 0.7934,
+        "score": 0.7899,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 44,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 5,
@@ -336,64 +320,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "49.464%"
+        "50.287%"
       ],
       "segments": [
         {
           "line": 3,
-          "start_pct": 49.464,
+          "start_pct": 50.287,
           "end_pct": 0.0,
-          "x_right_norm": 0.496,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.1526,
-          "y_bottom_norm": 0.2153,
+          "x_right_norm": 0.5027,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.1486,
+          "y_bottom_norm": 0.2125,
           "pixel_rect": [
-            31,
-            134,
-            308,
-            189
+            46,
+            328,
+            748,
+            469
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            134
+            46,
+            328
           ],
           [
-            308,
-            134
+            748,
+            328
           ],
           [
-            308,
-            189
+            748,
+            469
           ],
           [
-            31,
-            189
+            46,
+            469
           ]
         ]
       ],
-      "svg_path": "M 31 134 L 308 134 L 308 189 L 31 189 Z",
-      "normalized_svg_path": "M 0.0499 0.1526 L 0.4960 0.1526 L 0.4960 0.2153 L 0.0499 0.2153 Z",
+      "svg_path": "M 46 328 L 748 328 L 748 469 L 46 469 Z",
+      "normalized_svg_path": "M 0.0309 0.1486 L 0.5027 0.1486 L 0.5027 0.2125 L 0.0309 0.2125 Z",
       "marker": {
-        "cx": 55,
-        "cy": 154,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.0886,
-        "cy_norm": 0.1754,
+        "cx": 100,
+        "cy": 398,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.0672,
+        "cy_norm": 0.1803,
         "line": 3,
-        "score": 0.6948,
+        "score": 0.8364,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 45,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 6,
@@ -403,64 +383,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "49.464%"
+        "50.287%"
       ],
       "segments": [
         {
           "line": 4,
           "start_pct": 100.0,
-          "end_pct": 49.464,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.496,
-          "y_top_norm": 0.2153,
-          "y_bottom_norm": 0.279,
+          "end_pct": 50.287,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.5027,
+          "y_top_norm": 0.2125,
+          "y_bottom_norm": 0.2764,
           "pixel_rect": [
-            308,
-            189,
-            591,
-            245
+            748,
+            469,
+            1442,
+            610
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            308,
-            189
+            748,
+            469
           ],
           [
-            591,
-            189
+            1442,
+            469
           ],
           [
-            591,
-            245
+            1442,
+            610
           ],
           [
-            308,
-            245
+            748,
+            610
           ]
         ]
       ],
-      "svg_path": "M 308 189 L 591 189 L 591 245 L 308 245 Z",
-      "normalized_svg_path": "M 0.4960 0.2153 L 0.9517 0.2153 L 0.9517 0.2790 L 0.4960 0.2790 Z",
+      "svg_path": "M 748 469 L 1442 469 L 1442 610 L 748 610 Z",
+      "normalized_svg_path": "M 0.5027 0.2125 L 0.9691 0.2125 L 0.9691 0.2764 L 0.5027 0.2764 Z",
       "marker": {
-        "cx": 325,
-        "cy": 212,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.5233,
-        "cy_norm": 0.2415,
+        "cx": 783,
+        "cy": 541,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.5262,
+        "cy_norm": 0.2451,
         "line": 4,
-        "score": 0.6285,
+        "score": 0.8554,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 46,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 7,
@@ -470,64 +446,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "49.464%"
+        "50.287%"
       ],
       "segments": [
         {
           "line": 4,
-          "start_pct": 49.464,
+          "start_pct": 50.287,
           "end_pct": 0.0,
-          "x_right_norm": 0.496,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.2153,
-          "y_bottom_norm": 0.279,
+          "x_right_norm": 0.5027,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.2125,
+          "y_bottom_norm": 0.2764,
           "pixel_rect": [
-            31,
-            189,
-            308,
-            245
+            46,
+            469,
+            748,
+            610
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            189
+            46,
+            469
           ],
           [
-            308,
-            189
+            748,
+            469
           ],
           [
-            308,
-            245
+            748,
+            610
           ],
           [
-            31,
-            245
+            46,
+            610
           ]
         ]
       ],
-      "svg_path": "M 31 189 L 308 189 L 308 245 L 31 245 Z",
-      "normalized_svg_path": "M 0.0499 0.2153 L 0.4960 0.2153 L 0.4960 0.2790 L 0.0499 0.2790 Z",
+      "svg_path": "M 46 469 L 748 469 L 748 610 L 46 610 Z",
+      "normalized_svg_path": "M 0.0309 0.2125 L 0.5027 0.2125 L 0.5027 0.2764 L 0.0309 0.2764 Z",
       "marker": {
-        "cx": 55,
-        "cy": 210,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.0886,
-        "cy_norm": 0.2392,
+        "cx": 100,
+        "cy": 537,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.0672,
+        "cy_norm": 0.2433,
         "line": 4,
-        "score": 0.8042,
+        "score": 0.7516,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 47,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 8,
@@ -537,64 +509,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "71.786%"
+        "73.281%"
       ],
       "segments": [
         {
           "line": 5,
           "start_pct": 100.0,
-          "end_pct": 71.786,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.6973,
-          "y_top_norm": 0.279,
-          "y_bottom_norm": 0.3417,
+          "end_pct": 73.281,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.7184,
+          "y_top_norm": 0.2764,
+          "y_bottom_norm": 0.3403,
           "pixel_rect": [
-            433,
-            245,
-            591,
-            300
+            1069,
+            610,
+            1442,
+            751
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            433,
-            245
+            1069,
+            610
           ],
           [
-            591,
-            245
+            1442,
+            610
           ],
           [
-            591,
-            300
+            1442,
+            751
           ],
           [
-            433,
-            300
+            1069,
+            751
           ]
         ]
       ],
-      "svg_path": "M 433 245 L 591 245 L 591 300 L 433 300 Z",
-      "normalized_svg_path": "M 0.6973 0.2790 L 0.9517 0.2790 L 0.9517 0.3417 L 0.6973 0.3417 Z",
+      "svg_path": "M 1069 610 L 1442 610 L 1442 751 L 1069 751 Z",
+      "normalized_svg_path": "M 0.7184 0.2764 L 0.9691 0.2764 L 0.9691 0.3403 L 0.7184 0.3403 Z",
       "marker": {
-        "cx": 450,
-        "cy": 267,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.7246,
-        "cy_norm": 0.3041,
+        "cx": 1104,
+        "cy": 677,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.7419,
+        "cy_norm": 0.3068,
         "line": 5,
-        "score": 0.6721,
+        "score": 0.8252,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 48,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 9,
@@ -605,66 +573,62 @@
       "thumun_marker": null,
       "compact_polygons": [
         [
-          "71.786%",
-          "27.321%"
+          "73.281%",
+          "27.937%"
         ]
       ],
       "segments": [
         {
           "line": 5,
-          "start_pct": 71.786,
-          "end_pct": 27.321,
-          "x_right_norm": 0.6973,
-          "x_left_norm": 0.2947,
-          "y_top_norm": 0.279,
-          "y_bottom_norm": 0.3417,
+          "start_pct": 73.281,
+          "end_pct": 27.937,
+          "x_right_norm": 0.7184,
+          "x_left_norm": 0.293,
+          "y_top_norm": 0.2764,
+          "y_bottom_norm": 0.3403,
           "pixel_rect": [
-            183,
-            245,
-            433,
-            300
+            436,
+            610,
+            1069,
+            751
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            183,
-            245
+            436,
+            610
           ],
           [
-            433,
-            245
+            1069,
+            610
           ],
           [
-            433,
-            300
+            1069,
+            751
           ],
           [
-            183,
-            300
+            436,
+            751
           ]
         ]
       ],
-      "svg_path": "M 183 245 L 433 245 L 433 300 L 183 300 Z",
-      "normalized_svg_path": "M 0.2947 0.2790 L 0.6973 0.2790 L 0.6973 0.3417 L 0.2947 0.3417 Z",
+      "svg_path": "M 436 610 L 1069 610 L 1069 751 L 436 751 Z",
+      "normalized_svg_path": "M 0.2930 0.2764 L 0.7184 0.2764 L 0.7184 0.3403 L 0.2930 0.3403 Z",
       "marker": {
-        "cx": 201,
-        "cy": 267,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.3237,
-        "cy_norm": 0.3041,
+        "cx": 471,
+        "cy": 681,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.3165,
+        "cy_norm": 0.3086,
         "line": 5,
-        "score": 0.669,
+        "score": 0.8562,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 49,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 10,
@@ -674,98 +638,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "27.321%",
-        "78.571%"
+        "27.937%",
+        "80.229%"
       ],
       "segments": [
         {
           "line": 5,
-          "start_pct": 27.321,
+          "start_pct": 27.937,
           "end_pct": 0.0,
-          "x_right_norm": 0.2947,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.279,
-          "y_bottom_norm": 0.3417,
+          "x_right_norm": 0.293,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.2764,
+          "y_bottom_norm": 0.3403,
           "pixel_rect": [
-            31,
-            245,
-            183,
-            300
+            46,
+            610,
+            436,
+            751
           ]
         },
         {
           "line": 6,
           "start_pct": 100.0,
-          "end_pct": 78.571,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.7585,
-          "y_top_norm": 0.3417,
-          "y_bottom_norm": 0.4043,
+          "end_pct": 80.229,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.7829,
+          "y_top_norm": 0.3403,
+          "y_bottom_norm": 0.4042,
           "pixel_rect": [
-            471,
-            300,
-            591,
-            355
+            1165,
+            751,
+            1442,
+            892
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            245
+            46,
+            610
           ],
           [
-            183,
-            245
+            436,
+            610
           ],
           [
-            183,
-            300
+            436,
+            751
           ],
           [
-            31,
-            300
+            46,
+            751
           ]
         ],
         [
           [
-            471,
-            300
+            1165,
+            751
           ],
           [
-            591,
-            300
+            1442,
+            751
           ],
           [
-            591,
-            355
+            1442,
+            892
           ],
           [
-            471,
-            355
+            1165,
+            892
           ]
         ]
       ],
-      "svg_path": "M 31 245 L 183 245 L 183 300 L 31 300 Z M 471 300 L 591 300 L 591 355 L 471 355 Z",
-      "normalized_svg_path": "M 0.0499 0.2790 L 0.2947 0.2790 L 0.2947 0.3417 L 0.0499 0.3417 Z M 0.7585 0.3417 L 0.9517 0.3417 L 0.9517 0.4043 L 0.7585 0.4043 Z",
+      "svg_path": "M 46 610 L 436 610 L 436 751 L 46 751 Z M 1165 751 L 1442 751 L 1442 892 L 1165 892 Z",
+      "normalized_svg_path": "M 0.0309 0.2764 L 0.2930 0.2764 L 0.2930 0.3403 L 0.0309 0.3403 Z M 0.7829 0.3403 L 0.9691 0.3403 L 0.9691 0.4042 L 0.7829 0.4042 Z",
       "marker": {
-        "cx": 488,
-        "cy": 324,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.7858,
-        "cy_norm": 0.369,
+        "cx": 1201,
+        "cy": 821,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.8071,
+        "cy_norm": 0.372,
         "line": 6,
-        "score": 0.7507,
+        "score": 0.7624,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 50,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 11,
@@ -776,66 +736,62 @@
       "thumun_marker": null,
       "compact_polygons": [
         [
-          "78.571%",
-          "35.179%"
+          "80.229%",
+          "35.960%"
         ]
       ],
       "segments": [
         {
           "line": 6,
-          "start_pct": 78.571,
-          "end_pct": 35.179,
-          "x_right_norm": 0.7585,
-          "x_left_norm": 0.3671,
-          "y_top_norm": 0.3417,
-          "y_bottom_norm": 0.4043,
+          "start_pct": 80.229,
+          "end_pct": 35.96,
+          "x_right_norm": 0.7829,
+          "x_left_norm": 0.3683,
+          "y_top_norm": 0.3403,
+          "y_bottom_norm": 0.4042,
           "pixel_rect": [
-            228,
-            300,
-            471,
-            355
+            548,
+            751,
+            1165,
+            892
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            228,
-            300
+            548,
+            751
           ],
           [
-            471,
-            300
+            1165,
+            751
           ],
           [
-            471,
-            355
+            1165,
+            892
           ],
           [
-            228,
-            355
+            548,
+            892
           ]
         ]
       ],
-      "svg_path": "M 228 300 L 471 300 L 471 355 L 228 355 Z",
-      "normalized_svg_path": "M 0.3671 0.3417 L 0.7585 0.3417 L 0.7585 0.4043 L 0.3671 0.4043 Z",
+      "svg_path": "M 548 751 L 1165 751 L 1165 892 L 548 892 Z",
+      "normalized_svg_path": "M 0.3683 0.3403 L 0.7829 0.3403 L 0.7829 0.4042 L 0.3683 0.4042 Z",
       "marker": {
-        "cx": 245,
-        "cy": 325,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.3945,
-        "cy_norm": 0.3702,
+        "cx": 583,
+        "cy": 824,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.3918,
+        "cy_norm": 0.3734,
         "line": 6,
-        "score": 0.7373,
+        "score": 0.8576,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 51,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 12,
@@ -845,98 +801,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "35.179%",
-        "79.464%"
+        "35.960%",
+        "81.089%"
       ],
       "segments": [
         {
           "line": 6,
-          "start_pct": 35.179,
+          "start_pct": 35.96,
           "end_pct": 0.0,
-          "x_right_norm": 0.3671,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.3417,
-          "y_bottom_norm": 0.4043,
+          "x_right_norm": 0.3683,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.3403,
+          "y_bottom_norm": 0.4042,
           "pixel_rect": [
-            31,
-            300,
-            228,
-            355
+            46,
+            751,
+            548,
+            892
           ]
         },
         {
           "line": 7,
           "start_pct": 100.0,
-          "end_pct": 79.464,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.7665,
-          "y_top_norm": 0.4043,
-          "y_bottom_norm": 0.467,
+          "end_pct": 81.089,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.7917,
+          "y_top_norm": 0.4042,
+          "y_bottom_norm": 0.4681,
           "pixel_rect": [
-            476,
-            355,
-            591,
-            410
+            1178,
+            892,
+            1442,
+            1033
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            300
+            46,
+            751
           ],
           [
-            228,
-            300
+            548,
+            751
           ],
           [
-            228,
-            355
+            548,
+            892
           ],
           [
-            31,
-            355
+            46,
+            892
           ]
         ],
         [
           [
-            476,
-            355
+            1178,
+            892
           ],
           [
-            591,
-            355
+            1442,
+            892
           ],
           [
-            591,
-            410
+            1442,
+            1033
           ],
           [
-            476,
-            410
+            1178,
+            1033
           ]
         ]
       ],
-      "svg_path": "M 31 300 L 228 300 L 228 355 L 31 355 Z M 476 355 L 591 355 L 591 410 L 476 410 Z",
-      "normalized_svg_path": "M 0.0499 0.3417 L 0.3671 0.3417 L 0.3671 0.4043 L 0.0499 0.4043 Z M 0.7665 0.4043 L 0.9517 0.4043 L 0.9517 0.4670 L 0.7665 0.4670 Z",
+      "svg_path": "M 46 751 L 548 751 L 548 892 L 46 892 Z M 1178 892 L 1442 892 L 1442 1033 L 1178 1033 Z",
+      "normalized_svg_path": "M 0.0309 0.3403 L 0.3683 0.3403 L 0.3683 0.4042 L 0.0309 0.4042 Z M 0.7917 0.4042 L 0.9691 0.4042 L 0.9691 0.4681 L 0.7917 0.4681 Z",
       "marker": {
-        "cx": 493,
-        "cy": 380,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.7939,
-        "cy_norm": 0.4328,
+        "cx": 1213,
+        "cy": 959,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.8152,
+        "cy_norm": 0.4345,
         "line": 7,
-        "score": 0.6728,
+        "score": 0.8142,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 52,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 13,
@@ -947,66 +899,62 @@
       "thumun_marker": null,
       "compact_polygons": [
         [
-          "79.464%",
-          "35.357%"
+          "81.089%",
+          "36.175%"
         ]
       ],
       "segments": [
         {
           "line": 7,
-          "start_pct": 79.464,
-          "end_pct": 35.357,
-          "x_right_norm": 0.7665,
-          "x_left_norm": 0.3688,
-          "y_top_norm": 0.4043,
-          "y_bottom_norm": 0.467,
+          "start_pct": 81.089,
+          "end_pct": 36.175,
+          "x_right_norm": 0.7917,
+          "x_left_norm": 0.3703,
+          "y_top_norm": 0.4042,
+          "y_bottom_norm": 0.4681,
           "pixel_rect": [
-            229,
-            355,
-            476,
-            410
+            551,
+            892,
+            1178,
+            1033
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            229,
-            355
+            551,
+            892
           ],
           [
-            476,
-            355
+            1178,
+            892
           ],
           [
-            476,
-            410
+            1178,
+            1033
           ],
           [
-            229,
-            410
+            551,
+            1033
           ]
         ]
       ],
-      "svg_path": "M 229 355 L 476 355 L 476 410 L 229 410 Z",
-      "normalized_svg_path": "M 0.3688 0.4043 L 0.7665 0.4043 L 0.7665 0.4670 L 0.3688 0.4670 Z",
+      "svg_path": "M 551 892 L 1178 892 L 1178 1033 L 551 1033 Z",
+      "normalized_svg_path": "M 0.3703 0.4042 L 0.7917 0.4042 L 0.7917 0.4681 L 0.3703 0.4681 Z",
       "marker": {
-        "cx": 246,
-        "cy": 380,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.3961,
-        "cy_norm": 0.4328,
+        "cx": 586,
+        "cy": 961,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.3938,
+        "cy_norm": 0.4354,
         "line": 7,
-        "score": 0.7327,
+        "score": 0.8163,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 53,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 14,
@@ -1016,98 +964,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "35.357%",
-        "23.571%"
+        "36.175%",
+        "24.212%"
       ],
       "segments": [
         {
           "line": 7,
-          "start_pct": 35.357,
+          "start_pct": 36.175,
           "end_pct": 0.0,
-          "x_right_norm": 0.3688,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.4043,
-          "y_bottom_norm": 0.467,
+          "x_right_norm": 0.3703,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.4042,
+          "y_bottom_norm": 0.4681,
           "pixel_rect": [
-            31,
-            355,
-            229,
-            410
+            46,
+            892,
+            551,
+            1033
           ]
         },
         {
           "line": 8,
           "start_pct": 100.0,
-          "end_pct": 23.571,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.2609,
-          "y_top_norm": 0.467,
-          "y_bottom_norm": 0.5308,
+          "end_pct": 24.212,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.2581,
+          "y_top_norm": 0.4681,
+          "y_bottom_norm": 0.5319,
           "pixel_rect": [
-            162,
-            410,
-            591,
-            466
+            384,
+            1033,
+            1442,
+            1174
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            355
+            46,
+            892
           ],
           [
-            229,
-            355
+            551,
+            892
           ],
           [
-            229,
-            410
+            551,
+            1033
           ],
           [
-            31,
-            410
+            46,
+            1033
           ]
         ],
         [
           [
-            162,
-            410
+            384,
+            1033
           ],
           [
-            591,
-            410
+            1442,
+            1033
           ],
           [
-            591,
-            466
+            1442,
+            1174
           ],
           [
-            162,
-            466
+            384,
+            1174
           ]
         ]
       ],
-      "svg_path": "M 31 355 L 229 355 L 229 410 L 31 410 Z M 162 410 L 591 410 L 591 466 L 162 466 Z",
-      "normalized_svg_path": "M 0.0499 0.4043 L 0.3688 0.4043 L 0.3688 0.4670 L 0.0499 0.4670 Z M 0.2609 0.4670 L 0.9517 0.4670 L 0.9517 0.5308 L 0.2609 0.5308 Z",
+      "svg_path": "M 46 892 L 551 892 L 551 1033 L 46 1033 Z M 384 1033 L 1442 1033 L 1442 1174 L 384 1174 Z",
+      "normalized_svg_path": "M 0.0309 0.4042 L 0.3703 0.4042 L 0.3703 0.4681 L 0.0309 0.4681 Z M 0.2581 0.4681 L 0.9691 0.4681 L 0.9691 0.5319 L 0.2581 0.5319 Z",
       "marker": {
-        "cx": 180,
-        "cy": 435,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.2899,
-        "cy_norm": 0.4954,
+        "cx": 419,
+        "cy": 1101,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.2816,
+        "cy_norm": 0.4989,
         "line": 8,
-        "score": 0.7416,
+        "score": 0.8191,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 54,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 15,
@@ -1117,98 +1061,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "23.571%",
-        "60.893%"
+        "24.212%",
+        "62.178%"
       ],
       "segments": [
         {
           "line": 8,
-          "start_pct": 23.571,
+          "start_pct": 24.212,
           "end_pct": 0.0,
-          "x_right_norm": 0.2609,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.467,
-          "y_bottom_norm": 0.5308,
+          "x_right_norm": 0.2581,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.4681,
+          "y_bottom_norm": 0.5319,
           "pixel_rect": [
-            31,
-            410,
-            162,
-            466
+            46,
+            1033,
+            384,
+            1174
           ]
         },
         {
           "line": 9,
           "start_pct": 100.0,
-          "end_pct": 60.893,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.5974,
-          "y_top_norm": 0.5308,
-          "y_bottom_norm": 0.5934,
+          "end_pct": 62.178,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.6142,
+          "y_top_norm": 0.5319,
+          "y_bottom_norm": 0.5958,
           "pixel_rect": [
-            371,
-            466,
-            591,
-            521
+            914,
+            1174,
+            1442,
+            1315
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            410
+            46,
+            1033
           ],
           [
-            162,
-            410
+            384,
+            1033
           ],
           [
-            162,
-            466
+            384,
+            1174
           ],
           [
-            31,
-            466
+            46,
+            1174
           ]
         ],
         [
           [
-            371,
-            466
+            914,
+            1174
           ],
           [
-            591,
-            466
+            1442,
+            1174
           ],
           [
-            591,
-            521
+            1442,
+            1315
           ],
           [
-            371,
-            521
+            914,
+            1315
           ]
         ]
       ],
-      "svg_path": "M 31 410 L 162 410 L 162 466 L 31 466 Z M 371 466 L 591 466 L 591 521 L 371 521 Z",
-      "normalized_svg_path": "M 0.0499 0.4670 L 0.2609 0.4670 L 0.2609 0.5308 L 0.0499 0.5308 Z M 0.5974 0.5308 L 0.9517 0.5308 L 0.9517 0.5934 L 0.5974 0.5934 Z",
+      "svg_path": "M 46 1033 L 384 1033 L 384 1174 L 46 1174 Z M 914 1174 L 1442 1174 L 1442 1315 L 914 1315 Z",
+      "normalized_svg_path": "M 0.0309 0.4681 L 0.2581 0.4681 L 0.2581 0.5319 L 0.0309 0.5319 Z M 0.6142 0.5319 L 0.9691 0.5319 L 0.9691 0.5958 L 0.6142 0.5958 Z",
       "marker": {
-        "cx": 389,
-        "cy": 490,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.6264,
-        "cy_norm": 0.5581,
+        "cx": 949,
+        "cy": 1239,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.6378,
+        "cy_norm": 0.5614,
         "line": 9,
-        "score": 0.7707,
+        "score": 0.7835,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 55,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 16,
@@ -1218,98 +1158,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "60.893%",
-        "54.643%"
+        "62.178%",
+        "55.946%"
       ],
       "segments": [
         {
           "line": 9,
-          "start_pct": 60.893,
+          "start_pct": 62.178,
           "end_pct": 0.0,
-          "x_right_norm": 0.5974,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.5308,
-          "y_bottom_norm": 0.5934,
+          "x_right_norm": 0.6142,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.5319,
+          "y_bottom_norm": 0.5958,
           "pixel_rect": [
-            31,
-            466,
-            371,
-            521
+            46,
+            1174,
+            914,
+            1315
           ]
         },
         {
           "line": 10,
           "start_pct": 100.0,
-          "end_pct": 54.643,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.5411,
-          "y_top_norm": 0.5934,
-          "y_bottom_norm": 0.656,
+          "end_pct": 55.946,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.5558,
+          "y_top_norm": 0.5958,
+          "y_bottom_norm": 0.6597,
           "pixel_rect": [
-            336,
-            521,
-            591,
-            576
+            827,
+            1315,
+            1442,
+            1456
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            466
+            46,
+            1174
           ],
           [
-            371,
-            466
+            914,
+            1174
           ],
           [
-            371,
-            521
+            914,
+            1315
           ],
           [
-            31,
-            521
+            46,
+            1315
           ]
         ],
         [
           [
-            336,
-            521
+            827,
+            1315
           ],
           [
-            591,
-            521
+            1442,
+            1315
           ],
           [
-            591,
-            576
+            1442,
+            1456
           ],
           [
-            336,
-            576
+            827,
+            1456
           ]
         ]
       ],
-      "svg_path": "M 31 466 L 371 466 L 371 521 L 31 521 Z M 336 521 L 591 521 L 591 576 L 336 576 Z",
-      "normalized_svg_path": "M 0.0499 0.5308 L 0.5974 0.5308 L 0.5974 0.5934 L 0.0499 0.5934 Z M 0.5411 0.5934 L 0.9517 0.5934 L 0.9517 0.6560 L 0.5411 0.6560 Z",
+      "svg_path": "M 46 1174 L 914 1174 L 914 1315 L 46 1315 Z M 827 1315 L 1442 1315 L 1442 1456 L 827 1456 Z",
+      "normalized_svg_path": "M 0.0309 0.5319 L 0.6142 0.5319 L 0.6142 0.5958 L 0.0309 0.5958 Z M 0.5558 0.5958 L 0.9691 0.5958 L 0.9691 0.6597 L 0.5558 0.6597 Z",
       "marker": {
-        "cx": 354,
-        "cy": 547,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.57,
-        "cy_norm": 0.623,
+        "cx": 862,
+        "cy": 1384,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.5793,
+        "cy_norm": 0.6271,
         "line": 10,
-        "score": 0.738,
+        "score": 0.8619,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 56,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 17,
@@ -1319,64 +1255,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "54.643%"
+        "55.946%"
       ],
       "segments": [
         {
           "line": 10,
-          "start_pct": 54.643,
+          "start_pct": 55.946,
           "end_pct": 0.0,
-          "x_right_norm": 0.5411,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.5934,
-          "y_bottom_norm": 0.656,
+          "x_right_norm": 0.5558,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.5958,
+          "y_bottom_norm": 0.6597,
           "pixel_rect": [
-            31,
-            521,
-            336,
-            576
+            46,
+            1315,
+            827,
+            1456
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            521
+            46,
+            1315
           ],
           [
-            336,
-            521
+            827,
+            1315
           ],
           [
-            336,
-            576
+            827,
+            1456
           ],
           [
-            31,
-            576
+            46,
+            1456
           ]
         ]
       ],
-      "svg_path": "M 31 521 L 336 521 L 336 576 L 31 576 Z",
-      "normalized_svg_path": "M 0.0499 0.5934 L 0.5411 0.5934 L 0.5411 0.6560 L 0.0499 0.6560 Z",
+      "svg_path": "M 46 1315 L 827 1315 L 827 1456 L 46 1456 Z",
+      "normalized_svg_path": "M 0.0309 0.5958 L 0.5558 0.5958 L 0.5558 0.6597 L 0.0309 0.6597 Z",
       "marker": {
-        "cx": 55,
-        "cy": 547,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.0886,
-        "cy_norm": 0.623,
+        "cx": 102,
+        "cy": 1382,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.0685,
+        "cy_norm": 0.6262,
         "line": 10,
-        "score": 0.7026,
+        "score": 0.8303,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 57,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 18,
@@ -1386,64 +1318,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "54.643%"
+        "55.874%"
       ],
       "segments": [
         {
           "line": 11,
           "start_pct": 100.0,
-          "end_pct": 54.643,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.5411,
-          "y_top_norm": 0.656,
-          "y_bottom_norm": 0.7187,
+          "end_pct": 55.874,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.5551,
+          "y_top_norm": 0.6597,
+          "y_bottom_norm": 0.7236,
           "pixel_rect": [
-            336,
-            576,
-            591,
-            631
+            826,
+            1456,
+            1442,
+            1597
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            336,
-            576
+            826,
+            1456
           ],
           [
-            591,
-            576
+            1442,
+            1456
           ],
           [
-            591,
-            631
+            1442,
+            1597
           ],
           [
-            336,
-            631
+            826,
+            1597
           ]
         ]
       ],
-      "svg_path": "M 336 576 L 591 576 L 591 631 L 336 631 Z",
-      "normalized_svg_path": "M 0.5411 0.6560 L 0.9517 0.6560 L 0.9517 0.7187 L 0.5411 0.7187 Z",
+      "svg_path": "M 826 1456 L 1442 1456 L 1442 1597 L 826 1597 Z",
+      "normalized_svg_path": "M 0.5551 0.6597 L 0.9691 0.6597 L 0.9691 0.7236 L 0.5551 0.7236 Z",
       "marker": {
-        "cx": 354,
-        "cy": 604,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.57,
-        "cy_norm": 0.6879,
+        "cx": 861,
+        "cy": 1526,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.5786,
+        "cy_norm": 0.6914,
         "line": 11,
-        "score": 0.7953,
+        "score": 0.8158,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 58,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 19,
@@ -1453,64 +1381,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "54.643%"
+        "55.874%"
       ],
       "segments": [
         {
           "line": 11,
-          "start_pct": 54.643,
+          "start_pct": 55.874,
           "end_pct": 0.0,
-          "x_right_norm": 0.5411,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.656,
-          "y_bottom_norm": 0.7187,
+          "x_right_norm": 0.5551,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.6597,
+          "y_bottom_norm": 0.7236,
           "pixel_rect": [
-            31,
-            576,
-            336,
-            631
+            46,
+            1456,
+            826,
+            1597
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            576
+            46,
+            1456
           ],
           [
-            336,
-            576
+            826,
+            1456
           ],
           [
-            336,
-            631
+            826,
+            1597
           ],
           [
-            31,
-            631
+            46,
+            1597
           ]
         ]
       ],
-      "svg_path": "M 31 576 L 336 576 L 336 631 L 31 631 Z",
-      "normalized_svg_path": "M 0.0499 0.6560 L 0.5411 0.6560 L 0.5411 0.7187 L 0.0499 0.7187 Z",
+      "svg_path": "M 46 1456 L 826 1456 L 826 1597 L 46 1597 Z",
+      "normalized_svg_path": "M 0.0309 0.6597 L 0.5551 0.6597 L 0.5551 0.7236 L 0.0309 0.7236 Z",
       "marker": {
-        "cx": 56,
-        "cy": 605,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.0902,
-        "cy_norm": 0.6891,
+        "cx": 101,
+        "cy": 1526,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.0679,
+        "cy_norm": 0.6914,
         "line": 11,
-        "score": 0.8044,
+        "score": 0.8472,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 59,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 20,
@@ -1520,64 +1444,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "36.964%"
+        "37.966%"
       ],
       "segments": [
         {
           "line": 12,
           "start_pct": 100.0,
-          "end_pct": 36.964,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.3833,
-          "y_top_norm": 0.7187,
-          "y_bottom_norm": 0.7825,
+          "end_pct": 37.966,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.3871,
+          "y_top_norm": 0.7236,
+          "y_bottom_norm": 0.7875,
           "pixel_rect": [
-            238,
-            631,
-            591,
-            687
+            576,
+            1597,
+            1442,
+            1738
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            238,
-            631
+            576,
+            1597
           ],
           [
-            591,
-            631
+            1442,
+            1597
           ],
           [
-            591,
-            687
+            1442,
+            1738
           ],
           [
-            238,
-            687
+            576,
+            1738
           ]
         ]
       ],
-      "svg_path": "M 238 631 L 591 631 L 591 687 L 238 687 Z",
-      "normalized_svg_path": "M 0.3833 0.7187 L 0.9517 0.7187 L 0.9517 0.7825 L 0.3833 0.7825 Z",
+      "svg_path": "M 576 1597 L 1442 1597 L 1442 1738 L 576 1738 Z",
+      "normalized_svg_path": "M 0.3871 0.7236 L 0.9691 0.7236 L 0.9691 0.7875 L 0.3871 0.7875 Z",
       "marker": {
-        "cx": 255,
-        "cy": 660,
-        "w": 35,
-        "h": 37,
+        "cx": 611,
+        "cy": 1666,
+        "w": 71,
+        "h": 72,
         "cx_norm": 0.4106,
-        "cy_norm": 0.7517,
+        "cy_norm": 0.7549,
         "line": 12,
-        "score": 0.7565,
+        "score": 0.8554,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 60,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 21,
@@ -1587,98 +1507,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "36.964%",
-        "76.250%"
+        "37.966%",
+        "78.080%"
       ],
       "segments": [
         {
           "line": 12,
-          "start_pct": 36.964,
+          "start_pct": 37.966,
           "end_pct": 0.0,
-          "x_right_norm": 0.3833,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.7187,
-          "y_bottom_norm": 0.7825,
+          "x_right_norm": 0.3871,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.7236,
+          "y_bottom_norm": 0.7875,
           "pixel_rect": [
-            31,
-            631,
-            238,
-            687
+            46,
+            1597,
+            576,
+            1738
           ]
         },
         {
           "line": 13,
           "start_pct": 100.0,
-          "end_pct": 76.25,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.7375,
-          "y_top_norm": 0.7825,
-          "y_bottom_norm": 0.8451,
+          "end_pct": 78.08,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.7634,
+          "y_top_norm": 0.7875,
+          "y_bottom_norm": 0.8514,
           "pixel_rect": [
-            458,
-            687,
-            591,
-            742
+            1136,
+            1738,
+            1442,
+            1879
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            631
+            46,
+            1597
           ],
           [
-            238,
-            631
+            576,
+            1597
           ],
           [
-            238,
-            687
+            576,
+            1738
           ],
           [
-            31,
-            687
+            46,
+            1738
           ]
         ],
         [
           [
-            458,
-            687
+            1136,
+            1738
           ],
           [
-            591,
-            687
+            1442,
+            1738
           ],
           [
-            591,
-            742
+            1442,
+            1879
           ],
           [
-            458,
-            742
+            1136,
+            1879
           ]
         ]
       ],
-      "svg_path": "M 31 631 L 238 631 L 238 687 L 31 687 Z M 458 687 L 591 687 L 591 742 L 458 742 Z",
-      "normalized_svg_path": "M 0.0499 0.7187 L 0.3833 0.7187 L 0.3833 0.7825 L 0.0499 0.7825 Z M 0.7375 0.7825 L 0.9517 0.7825 L 0.9517 0.8451 L 0.7375 0.8451 Z",
+      "svg_path": "M 46 1597 L 576 1597 L 576 1738 L 46 1738 Z M 1136 1738 L 1442 1738 L 1442 1879 L 1136 1879 Z",
+      "normalized_svg_path": "M 0.0309 0.7236 L 0.3871 0.7236 L 0.3871 0.7875 L 0.0309 0.7875 Z M 0.7634 0.7875 L 0.9691 0.7875 L 0.9691 0.8514 L 0.7634 0.8514 Z",
       "marker": {
-        "cx": 475,
-        "cy": 717,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.7649,
-        "cy_norm": 0.8166,
+        "cx": 1171,
+        "cy": 1811,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.787,
+        "cy_norm": 0.8206,
         "line": 13,
-        "score": 0.7982,
+        "score": 0.8612,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 61,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 22,
@@ -1689,66 +1605,62 @@
       "thumun_marker": null,
       "compact_polygons": [
         [
-          "76.250%",
-          "37.143%"
+          "78.080%",
+          "38.181%"
         ]
       ],
       "segments": [
         {
           "line": 13,
-          "start_pct": 76.25,
-          "end_pct": 37.143,
-          "x_right_norm": 0.7375,
-          "x_left_norm": 0.3849,
-          "y_top_norm": 0.7825,
-          "y_bottom_norm": 0.8451,
+          "start_pct": 78.08,
+          "end_pct": 38.181,
+          "x_right_norm": 0.7634,
+          "x_left_norm": 0.3891,
+          "y_top_norm": 0.7875,
+          "y_bottom_norm": 0.8514,
           "pixel_rect": [
-            239,
-            687,
-            458,
-            742
+            579,
+            1738,
+            1136,
+            1879
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            239,
-            687
+            579,
+            1738
           ],
           [
-            458,
-            687
+            1136,
+            1738
           ],
           [
-            458,
-            742
+            1136,
+            1879
           ],
           [
-            239,
-            742
+            579,
+            1879
           ]
         ]
       ],
-      "svg_path": "M 239 687 L 458 687 L 458 742 L 239 742 Z",
-      "normalized_svg_path": "M 0.3849 0.7825 L 0.7375 0.7825 L 0.7375 0.8451 L 0.3849 0.8451 Z",
+      "svg_path": "M 579 1738 L 1136 1738 L 1136 1879 L 579 1879 Z",
+      "normalized_svg_path": "M 0.3891 0.7875 L 0.7634 0.7875 L 0.7634 0.8514 L 0.3891 0.8514 Z",
       "marker": {
-        "cx": 256,
-        "cy": 715,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.4122,
-        "cy_norm": 0.8144,
+        "cx": 614,
+        "cy": 1807,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.4126,
+        "cy_norm": 0.8188,
         "line": 13,
-        "score": 0.7244,
+        "score": 0.8381,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 62,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 23,
@@ -1758,98 +1670,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "37.143%",
-        "77.679%"
+        "38.181%",
+        "79.513%"
       ],
       "segments": [
         {
           "line": 13,
-          "start_pct": 37.143,
+          "start_pct": 38.181,
           "end_pct": 0.0,
-          "x_right_norm": 0.3849,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.7825,
-          "y_bottom_norm": 0.8451,
+          "x_right_norm": 0.3891,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.7875,
+          "y_bottom_norm": 0.8514,
           "pixel_rect": [
-            31,
-            687,
-            239,
-            742
+            46,
+            1738,
+            579,
+            1879
           ]
         },
         {
           "line": 14,
           "start_pct": 100.0,
-          "end_pct": 77.679,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.7504,
-          "y_top_norm": 0.8451,
-          "y_bottom_norm": 0.9077,
+          "end_pct": 79.513,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.7769,
+          "y_top_norm": 0.8514,
+          "y_bottom_norm": 0.9153,
           "pixel_rect": [
-            466,
-            742,
-            591,
-            797
+            1156,
+            1879,
+            1442,
+            2020
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            687
+            46,
+            1738
           ],
           [
-            239,
-            687
+            579,
+            1738
           ],
           [
-            239,
-            742
+            579,
+            1879
           ],
           [
-            31,
-            742
+            46,
+            1879
           ]
         ],
         [
           [
-            466,
-            742
+            1156,
+            1879
           ],
           [
-            591,
-            742
+            1442,
+            1879
           ],
           [
-            591,
-            797
+            1442,
+            2020
           ],
           [
-            466,
-            797
+            1156,
+            2020
           ]
         ]
       ],
-      "svg_path": "M 31 687 L 239 687 L 239 742 L 31 742 Z M 466 742 L 591 742 L 591 797 L 466 797 Z",
-      "normalized_svg_path": "M 0.0499 0.7825 L 0.3849 0.7825 L 0.3849 0.8451 L 0.0499 0.8451 Z M 0.7504 0.8451 L 0.9517 0.8451 L 0.9517 0.9077 L 0.7504 0.9077 Z",
+      "svg_path": "M 46 1738 L 579 1738 L 579 1879 L 46 1879 Z M 1156 1879 L 1442 1879 L 1442 2020 L 1156 2020 Z",
+      "normalized_svg_path": "M 0.0309 0.7875 L 0.3891 0.7875 L 0.3891 0.8514 L 0.0309 0.8514 Z M 0.7769 0.8514 L 0.9691 0.8514 L 0.9691 0.9153 L 0.7769 0.9153 Z",
       "marker": {
-        "cx": 483,
-        "cy": 772,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.7778,
-        "cy_norm": 0.8793,
+        "cx": 1191,
+        "cy": 1948,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.8004,
+        "cy_norm": 0.8826,
         "line": 14,
-        "score": 0.77,
+        "score": 0.8007,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 63,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 24,
@@ -1860,66 +1768,62 @@
       "thumun_marker": null,
       "compact_polygons": [
         [
-          "77.679%",
-          "52.679%"
+          "79.513%",
+          "54.083%"
         ]
       ],
       "segments": [
         {
           "line": 14,
-          "start_pct": 77.679,
-          "end_pct": 52.679,
-          "x_right_norm": 0.7504,
-          "x_left_norm": 0.525,
-          "y_top_norm": 0.8451,
-          "y_bottom_norm": 0.9077,
+          "start_pct": 79.513,
+          "end_pct": 54.083,
+          "x_right_norm": 0.7769,
+          "x_left_norm": 0.5383,
+          "y_top_norm": 0.8514,
+          "y_bottom_norm": 0.9153,
           "pixel_rect": [
-            326,
-            742,
-            466,
-            797
+            801,
+            1879,
+            1156,
+            2020
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            326,
-            742
+            801,
+            1879
           ],
           [
-            466,
-            742
+            1156,
+            1879
           ],
           [
-            466,
-            797
+            1156,
+            2020
           ],
           [
-            326,
-            797
+            801,
+            2020
           ]
         ]
       ],
-      "svg_path": "M 326 742 L 466 742 L 466 797 L 326 797 Z",
-      "normalized_svg_path": "M 0.5250 0.8451 L 0.7504 0.8451 L 0.7504 0.9077 L 0.5250 0.9077 Z",
+      "svg_path": "M 801 1879 L 1156 1879 L 1156 2020 L 801 2020 Z",
+      "normalized_svg_path": "M 0.5383 0.8514 L 0.7769 0.8514 L 0.7769 0.9153 L 0.5383 0.9153 Z",
       "marker": {
-        "cx": 343,
-        "cy": 772,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.5523,
-        "cy_norm": 0.8793,
+        "cx": 836,
+        "cy": 1950,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.5618,
+        "cy_norm": 0.8836,
         "line": 14,
-        "score": 0.8197,
+        "score": 0.806,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 64,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 25,
@@ -1929,64 +1833,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "52.679%"
+        "54.083%"
       ],
       "segments": [
         {
           "line": 14,
-          "start_pct": 52.679,
+          "start_pct": 54.083,
           "end_pct": 0.0,
-          "x_right_norm": 0.525,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.8451,
-          "y_bottom_norm": 0.9077,
+          "x_right_norm": 0.5383,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.8514,
+          "y_bottom_norm": 0.9153,
           "pixel_rect": [
-            31,
-            742,
-            326,
-            797
+            46,
+            1879,
+            801,
+            2020
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            742
+            46,
+            1879
           ],
           [
-            326,
-            742
+            801,
+            1879
           ],
           [
-            326,
-            797
+            801,
+            2020
           ],
           [
-            31,
-            797
+            46,
+            2020
           ]
         ]
       ],
-      "svg_path": "M 31 742 L 326 742 L 326 797 L 31 797 Z",
-      "normalized_svg_path": "M 0.0499 0.8451 L 0.5250 0.8451 L 0.5250 0.9077 L 0.0499 0.9077 Z",
+      "svg_path": "M 46 1879 L 801 1879 L 801 2020 L 46 2020 Z",
+      "normalized_svg_path": "M 0.0309 0.8514 L 0.5383 0.8514 L 0.5383 0.9153 L 0.0309 0.9153 Z",
       "marker": {
-        "cx": 53,
-        "cy": 770,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.0853,
-        "cy_norm": 0.877,
+        "cx": 100,
+        "cy": 1940,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.0672,
+        "cy_norm": 0.879,
         "line": 14,
-        "score": 0.7955,
+        "score": 0.8375,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 65,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 26,
@@ -1996,64 +1896,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "53.036%"
+        "54.441%"
       ],
       "segments": [
         {
           "line": 15,
           "start_pct": 100.0,
-          "end_pct": 53.036,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.5282,
-          "y_top_norm": 0.9077,
-          "y_bottom_norm": 0.9715,
+          "end_pct": 54.441,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.5417,
+          "y_top_norm": 0.9153,
+          "y_bottom_norm": 0.9792,
           "pixel_rect": [
-            328,
-            797,
-            591,
-            853
+            806,
+            2020,
+            1442,
+            2161
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            328,
-            797
+            806,
+            2020
           ],
           [
-            591,
-            797
+            1442,
+            2020
           ],
           [
-            591,
-            853
+            1442,
+            2161
           ],
           [
-            328,
-            853
+            806,
+            2161
           ]
         ]
       ],
-      "svg_path": "M 328 797 L 591 797 L 591 853 L 328 853 Z",
-      "normalized_svg_path": "M 0.5282 0.9077 L 0.9517 0.9077 L 0.9517 0.9715 L 0.5282 0.9715 Z",
+      "svg_path": "M 806 2020 L 1442 2020 L 1442 2161 L 806 2161 Z",
+      "normalized_svg_path": "M 0.5417 0.9153 L 0.9691 0.9153 L 0.9691 0.9792 L 0.5417 0.9792 Z",
       "marker": {
-        "cx": 345,
-        "cy": 825,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.5556,
-        "cy_norm": 0.9396,
+        "cx": 841,
+        "cy": 2085,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.5652,
+        "cy_norm": 0.9447,
         "line": 15,
-        "score": 0.7792,
+        "score": 0.8428,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 66,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     },
     {
       "ayah_index": 27,
@@ -2063,64 +1959,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "53.036%"
+        "54.441%"
       ],
       "segments": [
         {
           "line": 15,
-          "start_pct": 53.036,
+          "start_pct": 54.441,
           "end_pct": 0.0,
-          "x_right_norm": 0.5282,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.9077,
-          "y_bottom_norm": 0.9715,
+          "x_right_norm": 0.5417,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.9153,
+          "y_bottom_norm": 0.9792,
           "pixel_rect": [
-            31,
-            797,
-            328,
-            853
+            46,
+            2020,
+            806,
+            2161
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            797
+            46,
+            2020
           ],
           [
-            328,
-            797
+            806,
+            2020
           ],
           [
-            328,
-            853
+            806,
+            2161
           ],
           [
-            31,
-            853
+            46,
+            2161
           ]
         ]
       ],
-      "svg_path": "M 31 797 L 328 797 L 328 853 L 31 853 Z",
-      "normalized_svg_path": "M 0.0499 0.9077 L 0.5282 0.9077 L 0.5282 0.9715 L 0.0499 0.9715 Z",
+      "svg_path": "M 46 2020 L 806 2020 L 806 2161 L 46 2161 Z",
+      "normalized_svg_path": "M 0.0309 0.9153 L 0.5417 0.9153 L 0.5417 0.9792 L 0.0309 0.9792 Z",
       "marker": {
-        "cx": 55,
-        "cy": 825,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.0886,
-        "cy_norm": 0.9396,
+        "cx": 104,
+        "cy": 2079,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.0699,
+        "cy_norm": 0.942,
         "line": 15,
-        "score": 0.7703,
+        "score": 0.8213,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 55,
-      "ayah_number": 67,
-      "surah_name_ar": "الرحمن",
-      "surah_name_en": "Ar-Rahman"
+      }
     }
   ]
 }

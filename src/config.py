@@ -1,21 +1,49 @@
 """
 Configuration & Constants for Mushaf Ayah Mask Processing
 Al-Shazly Warsh Mushaf (Algeria Edition)
+High-Resolution Scan Edition (1488 x 2207)
 """
 
 from pathlib import Path
 
 # Layout geometry
-TARGET_WIDTH = 621
-TARGET_HEIGHT = 878
+TARGET_WIDTH = 1488
+TARGET_HEIGHT = 2207
 NUM_LINES = 15
 
-# Inner text box bounds as normalized ratios (x_min, y_min, x_max, y_max)
-# Evaluates to x: [31, 591] (width 560 px), y: [24, 853] (line height ~55.25 px)
-CONTENT_BOUNDS_NORMALIZED = (0.050, 0.028, 0.952, 0.972)
+# Standard page padding (for all pages except the opening two)
+# Padding is 46.23 px on both x and y directions
+PAGE_PADDING_PX = 46.23
+
+# Content bounds normalized:
+# x_min = 46.23 / 1488 ~ 0.0311
+# y_min = 46.23 / 2207 ~ 0.0209
+# x_max = (1488 - 46.23) / 1488 ~ 0.9689
+# y_max = (2207 - 46.23) / 2207 ~ 0.9791
+CONTENT_BOUNDS_NORMALIZED = (
+    round(PAGE_PADDING_PX / TARGET_WIDTH, 4),
+    round(PAGE_PADDING_PX / TARGET_HEIGHT, 4),
+    round((TARGET_WIDTH - PAGE_PADDING_PX) / TARGET_WIDTH, 4),
+    round((TARGET_HEIGHT - PAGE_PADDING_PX) / TARGET_HEIGHT, 4),
+)
+
+# Opening pages (0 and 1) explicit bounding boxes
+OPENING_HEADER_BOUNDS = {
+    "left": 92,
+    "top": 88,
+    "width": 1304,
+    "height": 285
+}
+
+OPENING_CONTENT_BOUNDS = {
+    "left": 132,
+    "top": 488,
+    "width": 1222,
+    "height": 1224
+}
 
 # Calibrated matching thresholds
-AYAH_MARKER_THRESHOLD = 0.58
+AYAH_MARKER_THRESHOLD = 0.50
 SURAH_HEADER_THRESHOLD = 0.33
 NMS_OVERLAP_THRESHOLD = 0.25
 

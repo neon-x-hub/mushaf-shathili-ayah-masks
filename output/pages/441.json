@@ -1,19 +1,19 @@
 {
   "page_number": 441,
   "dimensions": {
-    "width": 621,
-    "height": 878
+    "width": 1488,
+    "height": 2207
   },
   "content_bounds": {
-    "x_min": 31,
-    "y_min": 24,
-    "x_max": 591,
-    "y_max": 853,
+    "x_min": 46,
+    "y_min": 46,
+    "x_max": 1442,
+    "y_max": 2161,
     "normalized": {
-      "x_min": 0.05,
-      "y_min": 0.028,
-      "x_max": 0.952,
-      "y_max": 0.972
+      "x_min": 0.0309,
+      "y_min": 0.0208,
+      "x_max": 0.9691,
+      "y_max": 0.9792
     }
   },
   "lines_count": 15,
@@ -35,97 +35,93 @@
       "thumun_marker": null,
       "compact_polygons": [
         "f",
-        "80.893%"
+        "82.020%"
       ],
       "segments": [
         {
           "line": 1,
           "start_pct": 100.0,
           "end_pct": 0.0,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.0273,
-          "y_bottom_norm": 0.09,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.0208,
+          "y_bottom_norm": 0.0847,
           "pixel_rect": [
-            31,
-            24,
-            591,
-            79
+            46,
+            46,
+            1442,
+            187
           ]
         },
         {
           "line": 2,
           "start_pct": 100.0,
-          "end_pct": 80.893,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.7794,
-          "y_top_norm": 0.09,
-          "y_bottom_norm": 0.1526,
+          "end_pct": 82.02,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.8004,
+          "y_top_norm": 0.0847,
+          "y_bottom_norm": 0.1486,
           "pixel_rect": [
-            484,
-            79,
-            591,
-            134
+            1191,
+            187,
+            1442,
+            328
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            24
+            46,
+            46
           ],
           [
-            591,
-            24
+            1442,
+            46
           ],
           [
-            591,
-            79
+            1442,
+            187
           ],
           [
-            31,
-            79
+            46,
+            187
           ]
         ],
         [
           [
-            484,
-            79
+            1191,
+            187
           ],
           [
-            591,
-            79
+            1442,
+            187
           ],
           [
-            591,
-            134
+            1442,
+            328
           ],
           [
-            484,
-            134
+            1191,
+            328
           ]
         ]
       ],
-      "svg_path": "M 31 24 L 591 24 L 591 79 L 31 79 Z M 484 79 L 591 79 L 591 134 L 484 134 Z",
-      "normalized_svg_path": "M 0.0499 0.0273 L 0.9517 0.0273 L 0.9517 0.0900 L 0.0499 0.0900 Z M 0.7794 0.0900 L 0.9517 0.0900 L 0.9517 0.1526 L 0.7794 0.1526 Z",
+      "svg_path": "M 46 46 L 1442 46 L 1442 187 L 46 187 Z M 1191 187 L 1442 187 L 1442 328 L 1191 328 Z",
+      "normalized_svg_path": "M 0.0309 0.0208 L 0.9691 0.0208 L 0.9691 0.0847 L 0.0309 0.0847 Z M 0.8004 0.0847 L 0.9691 0.0847 L 0.9691 0.1486 L 0.8004 0.1486 Z",
       "marker": {
-        "cx": 501,
-        "cy": 106,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.8068,
-        "cy_norm": 0.1207,
+        "cx": 1226,
+        "cy": 258,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.8239,
+        "cy_norm": 0.1169,
         "line": 2,
-        "score": 0.7728,
+        "score": 0.83,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 28,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 2,
@@ -135,64 +131,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "80.893%"
+        "82.020%"
       ],
       "segments": [
         {
           "line": 2,
-          "start_pct": 80.893,
+          "start_pct": 82.02,
           "end_pct": 0.0,
-          "x_right_norm": 0.7794,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.09,
-          "y_bottom_norm": 0.1526,
+          "x_right_norm": 0.8004,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.0847,
+          "y_bottom_norm": 0.1486,
           "pixel_rect": [
-            31,
-            79,
-            484,
-            134
+            46,
+            187,
+            1191,
+            328
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            79
+            46,
+            187
           ],
           [
-            484,
-            79
+            1191,
+            187
           ],
           [
-            484,
-            134
+            1191,
+            328
           ],
           [
-            31,
-            134
+            46,
+            328
           ]
         ]
       ],
-      "svg_path": "M 31 79 L 484 79 L 484 134 L 31 134 Z",
-      "normalized_svg_path": "M 0.0499 0.0900 L 0.7794 0.0900 L 0.7794 0.1526 L 0.0499 0.1526 Z",
+      "svg_path": "M 46 187 L 1191 187 L 1191 328 L 46 328 Z",
+      "normalized_svg_path": "M 0.0309 0.0847 L 0.8004 0.0847 L 0.8004 0.1486 L 0.0309 0.1486 Z",
       "marker": {
-        "cx": 63,
-        "cy": 102,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.1014,
-        "cy_norm": 0.1162,
+        "cx": 97,
+        "cy": 251,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.0652,
+        "cy_norm": 0.1137,
         "line": 2,
-        "score": 0.7975,
+        "score": 0.7871,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 29,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 3,
@@ -203,97 +195,93 @@
       "thumun_marker": null,
       "compact_polygons": [
         "f",
-        "70.893%"
+        "71.705%"
       ],
       "segments": [
         {
           "line": 3,
           "start_pct": 100.0,
           "end_pct": 0.0,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.1526,
-          "y_bottom_norm": 0.2153,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.1486,
+          "y_bottom_norm": 0.2125,
           "pixel_rect": [
-            31,
-            134,
-            591,
-            189
+            46,
+            328,
+            1442,
+            469
           ]
         },
         {
           "line": 4,
           "start_pct": 100.0,
-          "end_pct": 70.893,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.6892,
-          "y_top_norm": 0.2153,
-          "y_bottom_norm": 0.279,
+          "end_pct": 71.705,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.7036,
+          "y_top_norm": 0.2125,
+          "y_bottom_norm": 0.2764,
           "pixel_rect": [
-            428,
-            189,
-            591,
-            245
+            1047,
+            469,
+            1442,
+            610
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            134
+            46,
+            328
           ],
           [
-            591,
-            134
+            1442,
+            328
           ],
           [
-            591,
-            189
+            1442,
+            469
           ],
           [
-            31,
-            189
+            46,
+            469
           ]
         ],
         [
           [
-            428,
-            189
+            1047,
+            469
           ],
           [
-            591,
-            189
+            1442,
+            469
           ],
           [
-            591,
-            245
+            1442,
+            610
           ],
           [
-            428,
-            245
+            1047,
+            610
           ]
         ]
       ],
-      "svg_path": "M 31 134 L 591 134 L 591 189 L 31 189 Z M 428 189 L 591 189 L 591 245 L 428 245 Z",
-      "normalized_svg_path": "M 0.0499 0.1526 L 0.9517 0.1526 L 0.9517 0.2153 L 0.0499 0.2153 Z M 0.6892 0.2153 L 0.9517 0.2153 L 0.9517 0.2790 L 0.6892 0.2790 Z",
+      "svg_path": "M 46 328 L 1442 328 L 1442 469 L 46 469 Z M 1047 469 L 1442 469 L 1442 610 L 1047 610 Z",
+      "normalized_svg_path": "M 0.0309 0.1486 L 0.9691 0.1486 L 0.9691 0.2125 L 0.0309 0.2125 Z M 0.7036 0.2125 L 0.9691 0.2125 L 0.9691 0.2764 L 0.7036 0.2764 Z",
       "marker": {
-        "cx": 445,
-        "cy": 215,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.7166,
-        "cy_norm": 0.2449,
+        "cx": 1082,
+        "cy": 538,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.7272,
+        "cy_norm": 0.2438,
         "line": 4,
-        "score": 0.7877,
+        "score": 0.8042,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 30,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 4,
@@ -303,98 +291,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "70.893%",
-        "65.357%"
+        "71.705%",
+        "66.117%"
       ],
       "segments": [
         {
           "line": 4,
-          "start_pct": 70.893,
+          "start_pct": 71.705,
           "end_pct": 0.0,
-          "x_right_norm": 0.6892,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.2153,
-          "y_bottom_norm": 0.279,
+          "x_right_norm": 0.7036,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.2125,
+          "y_bottom_norm": 0.2764,
           "pixel_rect": [
-            31,
-            189,
-            428,
-            245
+            46,
+            469,
+            1047,
+            610
           ]
         },
         {
           "line": 5,
           "start_pct": 100.0,
-          "end_pct": 65.357,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.6393,
-          "y_top_norm": 0.279,
-          "y_bottom_norm": 0.3417,
+          "end_pct": 66.117,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.6505,
+          "y_top_norm": 0.2764,
+          "y_bottom_norm": 0.3403,
           "pixel_rect": [
-            397,
-            245,
-            591,
-            300
+            968,
+            610,
+            1442,
+            751
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            189
+            46,
+            469
           ],
           [
-            428,
-            189
+            1047,
+            469
           ],
           [
-            428,
-            245
+            1047,
+            610
           ],
           [
-            31,
-            245
+            46,
+            610
           ]
         ],
         [
           [
-            397,
-            245
+            968,
+            610
           ],
           [
-            591,
-            245
+            1442,
+            610
           ],
           [
-            591,
-            300
+            1442,
+            751
           ],
           [
-            397,
-            300
+            968,
+            751
           ]
         ]
       ],
-      "svg_path": "M 31 189 L 428 189 L 428 245 L 31 245 Z M 397 245 L 591 245 L 591 300 L 397 300 Z",
-      "normalized_svg_path": "M 0.0499 0.2153 L 0.6892 0.2153 L 0.6892 0.2790 L 0.0499 0.2790 Z M 0.6393 0.2790 L 0.9517 0.2790 L 0.9517 0.3417 L 0.6393 0.3417 Z",
+      "svg_path": "M 46 469 L 1047 469 L 1047 610 L 46 610 Z M 968 610 L 1442 610 L 1442 751 L 968 751 Z",
+      "normalized_svg_path": "M 0.0309 0.2125 L 0.7036 0.2125 L 0.7036 0.2764 L 0.0309 0.2764 Z M 0.6505 0.2764 L 0.9691 0.2764 L 0.9691 0.3403 L 0.6505 0.3403 Z",
       "marker": {
-        "cx": 414,
-        "cy": 271,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.6667,
-        "cy_norm": 0.3087,
+        "cx": 1004,
+        "cy": 679,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.6747,
+        "cy_norm": 0.3077,
         "line": 5,
-        "score": 0.8178,
+        "score": 0.8431,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 31,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 5,
@@ -404,64 +388,60 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "65.357%"
+        "66.117%"
       ],
       "segments": [
         {
           "line": 5,
-          "start_pct": 65.357,
+          "start_pct": 66.117,
           "end_pct": 0.0,
-          "x_right_norm": 0.6393,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.279,
-          "y_bottom_norm": 0.3417,
+          "x_right_norm": 0.6505,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.2764,
+          "y_bottom_norm": 0.3403,
           "pixel_rect": [
-            31,
-            245,
-            397,
-            300
+            46,
+            610,
+            968,
+            751
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            245
+            46,
+            610
           ],
           [
-            397,
-            245
+            968,
+            610
           ],
           [
-            397,
-            300
+            968,
+            751
           ],
           [
-            31,
-            300
+            46,
+            751
           ]
         ]
       ],
-      "svg_path": "M 31 245 L 397 245 L 397 300 L 31 300 Z",
-      "normalized_svg_path": "M 0.0499 0.2790 L 0.6393 0.2790 L 0.6393 0.3417 L 0.0499 0.3417 Z",
+      "svg_path": "M 46 610 L 968 610 L 968 751 L 46 751 Z",
+      "normalized_svg_path": "M 0.0309 0.2764 L 0.6505 0.2764 L 0.6505 0.3403 L 0.0309 0.3403 Z",
       "marker": {
-        "cx": 64,
-        "cy": 270,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.1031,
-        "cy_norm": 0.3075,
+        "cx": 102,
+        "cy": 678,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.0685,
+        "cy_norm": 0.3072,
         "line": 5,
-        "score": 0.7797,
+        "score": 0.7801,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 32,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 6,
@@ -472,97 +452,93 @@
       "thumun_marker": null,
       "compact_polygons": [
         "f",
-        "71.250%"
+        "72.135%"
       ],
       "segments": [
         {
           "line": 6,
           "start_pct": 100.0,
           "end_pct": 0.0,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.3417,
-          "y_bottom_norm": 0.4043,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.3403,
+          "y_bottom_norm": 0.4042,
           "pixel_rect": [
-            31,
-            300,
-            591,
-            355
+            46,
+            751,
+            1442,
+            892
           ]
         },
         {
           "line": 7,
           "start_pct": 100.0,
-          "end_pct": 71.25,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.6924,
-          "y_top_norm": 0.4043,
-          "y_bottom_norm": 0.467,
+          "end_pct": 72.135,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.7077,
+          "y_top_norm": 0.4042,
+          "y_bottom_norm": 0.4681,
           "pixel_rect": [
-            430,
-            355,
-            591,
-            410
+            1053,
+            892,
+            1442,
+            1033
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            300
+            46,
+            751
           ],
           [
-            591,
-            300
+            1442,
+            751
           ],
           [
-            591,
-            355
+            1442,
+            892
           ],
           [
-            31,
-            355
+            46,
+            892
           ]
         ],
         [
           [
-            430,
-            355
+            1053,
+            892
           ],
           [
-            591,
-            355
+            1442,
+            892
           ],
           [
-            591,
-            410
+            1442,
+            1033
           ],
           [
-            430,
-            410
+            1053,
+            1033
           ]
         ]
       ],
-      "svg_path": "M 31 300 L 591 300 L 591 355 L 31 355 Z M 430 355 L 591 355 L 591 410 L 430 410 Z",
-      "normalized_svg_path": "M 0.0499 0.3417 L 0.9517 0.3417 L 0.9517 0.4043 L 0.0499 0.4043 Z M 0.6924 0.4043 L 0.9517 0.4043 L 0.9517 0.4670 L 0.6924 0.4670 Z",
+      "svg_path": "M 46 751 L 1442 751 L 1442 892 L 46 892 Z M 1053 892 L 1442 892 L 1442 1033 L 1053 1033 Z",
+      "normalized_svg_path": "M 0.0309 0.3403 L 0.9691 0.3403 L 0.9691 0.4042 L 0.0309 0.4042 Z M 0.7077 0.4042 L 0.9691 0.4042 L 0.9691 0.4681 L 0.7077 0.4681 Z",
       "marker": {
-        "cx": 447,
-        "cy": 382,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.7198,
-        "cy_norm": 0.4351,
+        "cx": 1088,
+        "cy": 961,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.7312,
+        "cy_norm": 0.4354,
         "line": 7,
-        "score": 0.7579,
+        "score": 0.8447,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 33,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 7,
@@ -572,98 +548,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "71.250%",
-        "47.321%"
+        "72.135%",
+        "47.421%"
       ],
       "segments": [
         {
           "line": 7,
-          "start_pct": 71.25,
+          "start_pct": 72.135,
           "end_pct": 0.0,
-          "x_right_norm": 0.6924,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.4043,
-          "y_bottom_norm": 0.467,
+          "x_right_norm": 0.7077,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.4042,
+          "y_bottom_norm": 0.4681,
           "pixel_rect": [
-            31,
-            355,
-            430,
-            410
+            46,
+            892,
+            1053,
+            1033
           ]
         },
         {
           "line": 8,
           "start_pct": 100.0,
-          "end_pct": 47.321,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.4767,
-          "y_top_norm": 0.467,
-          "y_bottom_norm": 0.5308,
+          "end_pct": 47.421,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.4758,
+          "y_top_norm": 0.4681,
+          "y_bottom_norm": 0.5319,
           "pixel_rect": [
-            296,
-            410,
-            591,
-            466
+            708,
+            1033,
+            1442,
+            1174
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            355
+            46,
+            892
           ],
           [
-            430,
-            355
+            1053,
+            892
           ],
           [
-            430,
-            410
+            1053,
+            1033
           ],
           [
-            31,
-            410
+            46,
+            1033
           ]
         ],
         [
           [
-            296,
-            410
+            708,
+            1033
           ],
           [
-            591,
-            410
+            1442,
+            1033
           ],
           [
-            591,
-            466
+            1442,
+            1174
           ],
           [
-            296,
-            466
+            708,
+            1174
           ]
         ]
       ],
-      "svg_path": "M 31 355 L 430 355 L 430 410 L 31 410 Z M 296 410 L 591 410 L 591 466 L 296 466 Z",
-      "normalized_svg_path": "M 0.0499 0.4043 L 0.6924 0.4043 L 0.6924 0.4670 L 0.0499 0.4670 Z M 0.4767 0.4670 L 0.9517 0.4670 L 0.9517 0.5308 L 0.4767 0.5308 Z",
+      "svg_path": "M 46 892 L 1053 892 L 1053 1033 L 46 1033 Z M 708 1033 L 1442 1033 L 1442 1174 L 708 1174 Z",
+      "normalized_svg_path": "M 0.0309 0.4042 L 0.7077 0.4042 L 0.7077 0.4681 L 0.0309 0.4681 Z M 0.4758 0.4681 L 0.9691 0.4681 L 0.9691 0.5319 L 0.4758 0.5319 Z",
       "marker": {
-        "cx": 313,
-        "cy": 438,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.504,
-        "cy_norm": 0.4989,
+        "cx": 743,
+        "cy": 1104,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.4993,
+        "cy_norm": 0.5002,
         "line": 8,
-        "score": 0.7261,
+        "score": 0.8711,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 34,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 8,
@@ -673,98 +645,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "47.321%",
-        "30.000%"
+        "47.421%",
+        "29.799%"
       ],
       "segments": [
         {
           "line": 8,
-          "start_pct": 47.321,
+          "start_pct": 47.421,
           "end_pct": 0.0,
-          "x_right_norm": 0.4767,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.467,
-          "y_bottom_norm": 0.5308,
+          "x_right_norm": 0.4758,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.4681,
+          "y_bottom_norm": 0.5319,
           "pixel_rect": [
-            31,
-            410,
-            296,
-            466
+            46,
+            1033,
+            708,
+            1174
           ]
         },
         {
           "line": 9,
           "start_pct": 100.0,
-          "end_pct": 30.0,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.3205,
-          "y_top_norm": 0.5308,
-          "y_bottom_norm": 0.5934,
+          "end_pct": 29.799,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.3105,
+          "y_top_norm": 0.5319,
+          "y_bottom_norm": 0.5958,
           "pixel_rect": [
-            199,
-            466,
-            591,
-            521
+            462,
+            1174,
+            1442,
+            1315
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            410
+            46,
+            1033
           ],
           [
-            296,
-            410
+            708,
+            1033
           ],
           [
-            296,
-            466
+            708,
+            1174
           ],
           [
-            31,
-            466
+            46,
+            1174
           ]
         ],
         [
           [
-            199,
-            466
+            462,
+            1174
           ],
           [
-            591,
-            466
+            1442,
+            1174
           ],
           [
-            591,
-            521
+            1442,
+            1315
           ],
           [
-            199,
-            521
+            462,
+            1315
           ]
         ]
       ],
-      "svg_path": "M 31 410 L 296 410 L 296 466 L 31 466 Z M 199 466 L 591 466 L 591 521 L 199 521 Z",
-      "normalized_svg_path": "M 0.0499 0.4670 L 0.4767 0.4670 L 0.4767 0.5308 L 0.0499 0.5308 Z M 0.3205 0.5308 L 0.9517 0.5308 L 0.9517 0.5934 L 0.3205 0.5934 Z",
+      "svg_path": "M 46 1033 L 708 1033 L 708 1174 L 46 1174 Z M 462 1174 L 1442 1174 L 1442 1315 L 462 1315 Z",
+      "normalized_svg_path": "M 0.0309 0.4681 L 0.4758 0.4681 L 0.4758 0.5319 L 0.0309 0.5319 Z M 0.3105 0.5319 L 0.9691 0.5319 L 0.9691 0.5958 L 0.3105 0.5958 Z",
       "marker": {
-        "cx": 216,
-        "cy": 494,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.3478,
-        "cy_norm": 0.5626,
+        "cx": 497,
+        "cy": 1247,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.334,
+        "cy_norm": 0.565,
         "line": 9,
-        "score": 0.7765,
+        "score": 0.8174,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 35,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 9,
@@ -774,132 +742,128 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "30.000%",
+        "29.799%",
         "f",
-        "64.643%"
+        "65.544%"
       ],
       "segments": [
         {
           "line": 9,
-          "start_pct": 30.0,
+          "start_pct": 29.799,
           "end_pct": 0.0,
-          "x_right_norm": 0.3205,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.5308,
-          "y_bottom_norm": 0.5934,
+          "x_right_norm": 0.3105,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.5319,
+          "y_bottom_norm": 0.5958,
           "pixel_rect": [
-            31,
-            466,
-            199,
-            521
+            46,
+            1174,
+            462,
+            1315
           ]
         },
         {
           "line": 10,
           "start_pct": 100.0,
           "end_pct": 0.0,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.5934,
-          "y_bottom_norm": 0.656,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.5958,
+          "y_bottom_norm": 0.6597,
           "pixel_rect": [
-            31,
-            521,
-            591,
-            576
+            46,
+            1315,
+            1442,
+            1456
           ]
         },
         {
           "line": 11,
           "start_pct": 100.0,
-          "end_pct": 64.643,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.6329,
-          "y_top_norm": 0.656,
-          "y_bottom_norm": 0.7187,
+          "end_pct": 65.544,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.6458,
+          "y_top_norm": 0.6597,
+          "y_bottom_norm": 0.7236,
           "pixel_rect": [
-            393,
-            576,
-            591,
-            631
+            961,
+            1456,
+            1442,
+            1597
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            466
+            46,
+            1174
           ],
           [
-            199,
-            466
+            462,
+            1174
           ],
           [
-            199,
-            521
+            462,
+            1315
           ],
           [
-            31,
-            521
+            46,
+            1315
           ]
         ],
         [
           [
-            31,
-            521
+            46,
+            1315
           ],
           [
-            591,
-            521
+            1442,
+            1315
           ],
           [
-            591,
-            576
+            1442,
+            1456
           ],
           [
-            31,
-            576
+            46,
+            1456
           ]
         ],
         [
           [
-            393,
-            576
+            961,
+            1456
           ],
           [
-            591,
-            576
+            1442,
+            1456
           ],
           [
-            591,
-            631
+            1442,
+            1597
           ],
           [
-            393,
-            631
+            961,
+            1597
           ]
         ]
       ],
-      "svg_path": "M 31 466 L 199 466 L 199 521 L 31 521 Z M 31 521 L 591 521 L 591 576 L 31 576 Z M 393 576 L 591 576 L 591 631 L 393 631 Z",
-      "normalized_svg_path": "M 0.0499 0.5308 L 0.3205 0.5308 L 0.3205 0.5934 L 0.0499 0.5934 Z M 0.0499 0.5934 L 0.9517 0.5934 L 0.9517 0.6560 L 0.0499 0.6560 Z M 0.6329 0.6560 L 0.9517 0.6560 L 0.9517 0.7187 L 0.6329 0.7187 Z",
+      "svg_path": "M 46 1174 L 462 1174 L 462 1315 L 46 1315 Z M 46 1315 L 1442 1315 L 1442 1456 L 46 1456 Z M 961 1456 L 1442 1456 L 1442 1597 L 961 1597 Z",
+      "normalized_svg_path": "M 0.0309 0.5319 L 0.3105 0.5319 L 0.3105 0.5958 L 0.0309 0.5958 Z M 0.0309 0.5958 L 0.9691 0.5958 L 0.9691 0.6597 L 0.0309 0.6597 Z M 0.6458 0.6597 L 0.9691 0.6597 L 0.9691 0.7236 L 0.6458 0.7236 Z",
       "marker": {
-        "cx": 410,
-        "cy": 605,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.6602,
-        "cy_norm": 0.6891,
+        "cx": 996,
+        "cy": 1529,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.6694,
+        "cy_norm": 0.6928,
         "line": 11,
-        "score": 0.8218,
+        "score": 0.8556,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 36,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 10,
@@ -909,98 +873,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "64.643%",
-        "63.214%"
+        "65.544%",
+        "64.040%"
       ],
       "segments": [
         {
           "line": 11,
-          "start_pct": 64.643,
+          "start_pct": 65.544,
           "end_pct": 0.0,
-          "x_right_norm": 0.6329,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.656,
-          "y_bottom_norm": 0.7187,
+          "x_right_norm": 0.6458,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.6597,
+          "y_bottom_norm": 0.7236,
           "pixel_rect": [
-            31,
-            576,
-            393,
-            631
+            46,
+            1456,
+            961,
+            1597
           ]
         },
         {
           "line": 12,
           "start_pct": 100.0,
-          "end_pct": 63.214,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.62,
-          "y_top_norm": 0.7187,
-          "y_bottom_norm": 0.7825,
+          "end_pct": 64.04,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.6317,
+          "y_top_norm": 0.7236,
+          "y_bottom_norm": 0.7875,
           "pixel_rect": [
-            385,
-            631,
-            591,
-            687
+            940,
+            1597,
+            1442,
+            1738
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            576
+            46,
+            1456
           ],
           [
-            393,
-            576
+            961,
+            1456
           ],
           [
-            393,
-            631
+            961,
+            1597
           ],
           [
-            31,
-            631
+            46,
+            1597
           ]
         ],
         [
           [
-            385,
-            631
+            940,
+            1597
           ],
           [
-            591,
-            631
+            1442,
+            1597
           ],
           [
-            591,
-            687
+            1442,
+            1738
           ],
           [
-            385,
-            687
+            940,
+            1738
           ]
         ]
       ],
-      "svg_path": "M 31 576 L 393 576 L 393 631 L 31 631 Z M 385 631 L 591 631 L 591 687 L 385 687 Z",
-      "normalized_svg_path": "M 0.0499 0.6560 L 0.6329 0.6560 L 0.6329 0.7187 L 0.0499 0.7187 Z M 0.6200 0.7187 L 0.9517 0.7187 L 0.9517 0.7825 L 0.6200 0.7825 Z",
+      "svg_path": "M 46 1456 L 961 1456 L 961 1597 L 46 1597 Z M 940 1597 L 1442 1597 L 1442 1738 L 940 1738 Z",
+      "normalized_svg_path": "M 0.0309 0.6597 L 0.6458 0.6597 L 0.6458 0.7236 L 0.0309 0.7236 Z M 0.6317 0.7236 L 0.9691 0.7236 L 0.9691 0.7875 L 0.6317 0.7875 Z",
       "marker": {
-        "cx": 402,
-        "cy": 658,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.6473,
-        "cy_norm": 0.7494,
+        "cx": 975,
+        "cy": 1666,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.6552,
+        "cy_norm": 0.7549,
         "line": 12,
-        "score": 0.7293,
+        "score": 0.8333,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 37,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 11,
@@ -1010,98 +970,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "63.214%",
-        "53.750%"
+        "64.040%",
+        "54.370%"
       ],
       "segments": [
         {
           "line": 12,
-          "start_pct": 63.214,
+          "start_pct": 64.04,
           "end_pct": 0.0,
-          "x_right_norm": 0.62,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.7187,
-          "y_bottom_norm": 0.7825,
+          "x_right_norm": 0.6317,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.7236,
+          "y_bottom_norm": 0.7875,
           "pixel_rect": [
-            31,
-            631,
-            385,
-            687
+            46,
+            1597,
+            940,
+            1738
           ]
         },
         {
           "line": 13,
           "start_pct": 100.0,
-          "end_pct": 53.75,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.5346,
-          "y_top_norm": 0.7825,
-          "y_bottom_norm": 0.8451,
+          "end_pct": 54.37,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.541,
+          "y_top_norm": 0.7875,
+          "y_bottom_norm": 0.8514,
           "pixel_rect": [
-            332,
-            687,
-            591,
-            742
+            805,
+            1738,
+            1442,
+            1879
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            631
+            46,
+            1597
           ],
           [
-            385,
-            631
+            940,
+            1597
           ],
           [
-            385,
-            687
+            940,
+            1738
           ],
           [
-            31,
-            687
+            46,
+            1738
           ]
         ],
         [
           [
-            332,
-            687
+            805,
+            1738
           ],
           [
-            591,
-            687
+            1442,
+            1738
           ],
           [
-            591,
-            742
+            1442,
+            1879
           ],
           [
-            332,
-            742
+            805,
+            1879
           ]
         ]
       ],
-      "svg_path": "M 31 631 L 385 631 L 385 687 L 31 687 Z M 332 687 L 591 687 L 591 742 L 332 742 Z",
-      "normalized_svg_path": "M 0.0499 0.7187 L 0.6200 0.7187 L 0.6200 0.7825 L 0.0499 0.7825 Z M 0.5346 0.7825 L 0.9517 0.7825 L 0.9517 0.8451 L 0.5346 0.8451 Z",
+      "svg_path": "M 46 1597 L 940 1597 L 940 1738 L 46 1738 Z M 805 1738 L 1442 1738 L 1442 1879 L 805 1879 Z",
+      "normalized_svg_path": "M 0.0309 0.7236 L 0.6317 0.7236 L 0.6317 0.7875 L 0.0309 0.7875 Z M 0.5410 0.7875 L 0.9691 0.7875 L 0.9691 0.8514 L 0.5410 0.8514 Z",
       "marker": {
-        "cx": 349,
-        "cy": 715,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.562,
-        "cy_norm": 0.8144,
+        "cx": 840,
+        "cy": 1809,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.5645,
+        "cy_norm": 0.8197,
         "line": 13,
-        "score": 0.7625,
+        "score": 0.882,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 38,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 12,
@@ -1111,98 +1067,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "53.750%",
-        "51.964%"
+        "54.370%",
+        "52.579%"
       ],
       "segments": [
         {
           "line": 13,
-          "start_pct": 53.75,
+          "start_pct": 54.37,
           "end_pct": 0.0,
-          "x_right_norm": 0.5346,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.7825,
-          "y_bottom_norm": 0.8451,
+          "x_right_norm": 0.541,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.7875,
+          "y_bottom_norm": 0.8514,
           "pixel_rect": [
-            31,
-            687,
-            332,
-            742
+            46,
+            1738,
+            805,
+            1879
           ]
         },
         {
           "line": 14,
           "start_pct": 100.0,
-          "end_pct": 51.964,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.5185,
-          "y_top_norm": 0.8451,
-          "y_bottom_norm": 0.9077,
+          "end_pct": 52.579,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.5235,
+          "y_top_norm": 0.8514,
+          "y_bottom_norm": 0.9153,
           "pixel_rect": [
-            322,
-            742,
-            591,
-            797
+            779,
+            1879,
+            1442,
+            2020
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            687
+            46,
+            1738
           ],
           [
-            332,
-            687
+            805,
+            1738
           ],
           [
-            332,
-            742
+            805,
+            1879
           ],
           [
-            31,
-            742
+            46,
+            1879
           ]
         ],
         [
           [
-            322,
-            742
+            779,
+            1879
           ],
           [
-            591,
-            742
+            1442,
+            1879
           ],
           [
-            591,
-            797
+            1442,
+            2020
           ],
           [
-            322,
-            797
+            779,
+            2020
           ]
         ]
       ],
-      "svg_path": "M 31 687 L 332 687 L 332 742 L 31 742 Z M 322 742 L 591 742 L 591 797 L 322 797 Z",
-      "normalized_svg_path": "M 0.0499 0.7825 L 0.5346 0.7825 L 0.5346 0.8451 L 0.0499 0.8451 Z M 0.5185 0.8451 L 0.9517 0.8451 L 0.9517 0.9077 L 0.5185 0.9077 Z",
+      "svg_path": "M 46 1738 L 805 1738 L 805 1879 L 46 1879 Z M 779 1879 L 1442 1879 L 1442 2020 L 779 2020 Z",
+      "normalized_svg_path": "M 0.0309 0.7875 L 0.5410 0.7875 L 0.5410 0.8514 L 0.0309 0.8514 Z M 0.5235 0.8514 L 0.9691 0.8514 L 0.9691 0.9153 L 0.5235 0.9153 Z",
       "marker": {
-        "cx": 339,
-        "cy": 770,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.5459,
-        "cy_norm": 0.877,
+        "cx": 815,
+        "cy": 1950,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.5477,
+        "cy_norm": 0.8836,
         "line": 14,
-        "score": 0.8091,
+        "score": 0.8175,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 39,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     },
     {
       "ayah_index": 13,
@@ -1212,98 +1164,94 @@
       "has_thumun": false,
       "thumun_marker": null,
       "compact_polygons": [
-        "51.964%",
+        "52.579%",
         "f"
       ],
       "segments": [
         {
           "line": 14,
-          "start_pct": 51.964,
+          "start_pct": 52.579,
           "end_pct": 0.0,
-          "x_right_norm": 0.5185,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.8451,
-          "y_bottom_norm": 0.9077,
+          "x_right_norm": 0.5235,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.8514,
+          "y_bottom_norm": 0.9153,
           "pixel_rect": [
-            31,
-            742,
-            322,
-            797
+            46,
+            1879,
+            779,
+            2020
           ]
         },
         {
           "line": 15,
           "start_pct": 100.0,
           "end_pct": 0.0,
-          "x_right_norm": 0.9517,
-          "x_left_norm": 0.0499,
-          "y_top_norm": 0.9077,
-          "y_bottom_norm": 0.9715,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.9153,
+          "y_bottom_norm": 0.9792,
           "pixel_rect": [
-            31,
-            797,
-            591,
-            853
+            46,
+            2020,
+            1442,
+            2161
           ]
         }
       ],
       "pixel_polygons": [
         [
           [
-            31,
-            742
+            46,
+            1879
           ],
           [
-            322,
-            742
+            779,
+            1879
           ],
           [
-            322,
-            797
+            779,
+            2020
           ],
           [
-            31,
-            797
+            46,
+            2020
           ]
         ],
         [
           [
-            31,
-            797
+            46,
+            2020
           ],
           [
-            591,
-            797
+            1442,
+            2020
           ],
           [
-            591,
-            853
+            1442,
+            2161
           ],
           [
-            31,
-            853
+            46,
+            2161
           ]
         ]
       ],
-      "svg_path": "M 31 742 L 322 742 L 322 797 L 31 797 Z M 31 797 L 591 797 L 591 853 L 31 853 Z",
-      "normalized_svg_path": "M 0.0499 0.8451 L 0.5185 0.8451 L 0.5185 0.9077 L 0.0499 0.9077 Z M 0.0499 0.9077 L 0.9517 0.9077 L 0.9517 0.9715 L 0.0499 0.9715 Z",
+      "svg_path": "M 46 1879 L 779 1879 L 779 2020 L 46 2020 Z M 46 2020 L 1442 2020 L 1442 2161 L 46 2161 Z",
+      "normalized_svg_path": "M 0.0309 0.8514 L 0.5235 0.8514 L 0.5235 0.9153 L 0.0309 0.9153 Z M 0.0309 0.9153 L 0.9691 0.9153 L 0.9691 0.9792 L 0.0309 0.9792 Z",
       "marker": {
-        "cx": 63,
-        "cy": 819,
-        "w": 35,
-        "h": 37,
-        "cx_norm": 0.1014,
-        "cy_norm": 0.9328,
+        "cx": 103,
+        "cy": 2074,
+        "w": 71,
+        "h": 72,
+        "cx_norm": 0.0692,
+        "cy_norm": 0.9397,
         "line": 15,
-        "score": 0.8045,
+        "score": 0.8417,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
-      },
-      "surah_number": 36,
-      "ayah_number": 40,
-      "surah_name_ar": "يس",
-      "surah_name_en": "Ya-Sin"
+      }
     }
   ]
 }

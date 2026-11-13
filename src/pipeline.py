@@ -17,6 +17,9 @@ from .config import (
     TARGET_HEIGHT,
     NUM_LINES,
     CONTENT_BOUNDS_NORMALIZED,
+    PAGE_PADDING_PX,
+    OPENING_HEADER_BOUNDS,
+    OPENING_CONTENT_BOUNDS,
     AYAH_MARKER_THRESHOLD,
     SURAH_HEADER_THRESHOLD,
     EDGE_TOLERANCE_PCT,
@@ -45,23 +48,39 @@ def process_opening_page(
     W, H = target_dimensions
     mask_file = f"{page_number:03d}_mask.png"
     mask_path = resolve_asset_path(mask_file)
-    mask_bgr = cv2.imread(str(mask_path))
-    if mask_bgr is None:
-        raise FileNotFoundError(f"Opening mask file not found: {mask_path}")
-    if (mask_bgr.shape[1], mask_bgr.shape[0]) != (W, H):
-        mask_bgr = cv2.resize(mask_bgr, (W, H))
+    mask_bgr = cv2.imread(str(mask_path)) if mask_path.exists() else None
 
-    # Green content bounding box
-    g_mask = (mask_bgr[:, :, 1] > 180) & (mask_bgr[:, :, 2] < 80) & (mask_bgr[:, :, 0] < 80)
-    ys, xs = np.where(g_mask)
-    gx1, gx2 = int(xs.min()), int(xs.max())
-    gy1, gy2 = int(ys.min()), int(ys.max())
+    # Surah Header bounding box:
+    # Default explicit bounds from specs: left: 92px, top: 88px, width: 1304px, height: 285px
+    rx1 = OPENING_HEADER_BOUNDS["left"]
+    ry1 = OPENING_HEADER_BOUNDS["top"]
+    rx2 = rx1 + OPENING_HEADER_BOUNDS["width"]
+    ry2 = ry1 + OPENING_HEADER_BOUNDS["height"]
 
-    # Red surah header bounding box
-    r_mask = (mask_bgr[:, :, 2] > 180) & (mask_bgr[:, :, 1] < 80) & (mask_bgr[:, :, 0] < 80)
-    rys, rxs = np.where(r_mask)
-    rx1, rx2 = int(rxs.min()), int(rxs.max())
-    ry1, ry2 = int(rys.min()), int(rys.max())
+    # Page Content bounding box:
+    # Default explicit bounds from specs: left: 132px, top: 488px, width: 1222px, height: 1224px
+    gx1 = OPENING_CONTENT_BOUNDS["left"]
+    gy1 = OPENING_CONTENT_BOUNDS["top"]
+    gx2 = gx1 + OPENING_CONTENT_BOUNDS["width"]
+    gy2 = gy1 + OPENING_CONTENT_BOUNDS["height"]
+
+    if mask_bgr is not None:
+        if (mask_bgr.shape[1], mask_bgr.shape[0]) != (W, H):
+            mask_bgr = cv2.resize(mask_bgr, (W, H))
+
+        # Green content bounding box
+        g_mask = (mask_bgr[:, :, 1] > 180) & (mask_bgr[:, :, 2] < 80) & (mask_bgr[:, :, 0] < 80)
+        ys, xs = np.where(g_mask)
+        if len(xs) > 0 and len(ys) > 0:
+            gx1, gx2 = int(xs.min()), int(xs.max())
+            gy1, gy2 = int(ys.min()), int(ys.max())
+
+        # Red surah header bounding box
+        r_mask = (mask_bgr[:, :, 2] > 180) & (mask_bgr[:, :, 1] < 80) & (mask_bgr[:, :, 0] < 80)
+        rys, rxs = np.where(r_mask)
+        if len(rxs) > 0 and len(rys) > 0:
+            rx1, rx2 = int(rxs.min()), int(rxs.max())
+            ry1, ry2 = int(rys.min()), int(rys.max())
 
     # Detect rosette markers in content crop
     crop = page_gray[gy1:gy2 + 1, gx1:gx2 + 1]
@@ -72,7 +91,8 @@ def process_opening_page(
     th, tw = rosette_ring.shape
 
     res = cv2.matchTemplate(crop, rosette_ring, cv2.TM_CCOEFF_NORMED)
-    locs = np.where(res >= 0.50)
+    res = np.nan_to_num(res, nan=0.0)
+    locs = np.where(res >= 0.48)
     boxes = []
     for y, x in zip(*locs):
         boxes.append((int(x), int(y), int(x + tw), int(y + th), float(res[y, x])))
@@ -217,10 +237,16 @@ def process_page_data(
     if page_number in (0, 1):
         return process_opening_page(page_number, page_gray, target_dimensions=(W, H), edge_tolerance_pct=edge_tolerance_pct)
 
-    x_min = int(W * padding_bounds[0])
-    y_min = int(H * padding_bounds[1])
-    x_max = int(W * padding_bounds[2])
-    y_max = int(H * padding_bounds[3])
+    if padding_bounds == CONTENT_BOUNDS_NORMALIZED and (W, H) == (TARGET_WIDTH, TARGET_HEIGHT):
+        x_min = int(round(PAGE_PADDING_PX))
+        y_min = int(round(PAGE_PADDING_PX))
+        x_max = int(round(W - PAGE_PADDING_PX))
+        y_max = int(round(H - PAGE_PADDING_PX))
+    else:
+        x_min = int(round(W * padding_bounds[0]))
+        y_min = int(round(H * padding_bounds[1]))
+        x_max = int(round(W * padding_bounds[2]))
+        y_max = int(round(H * padding_bounds[3]))
     line_height = (y_max - y_min) / num_lines
 
     # 1. Full-page Surah Header Detection (unclipped by line margins)
@@ -320,7 +346,7 @@ def process_page_data(
         missing_img = cv2.imread(str(missing_mask_path))
         if missing_img is not None:
             if (missing_img.shape[1], missing_img.shape[0]) != (W, H):
-                missing_img = cv2.resize(missing_img, (W, H))
+                missing_img = cv2.resize(missing_img, (W, H), interpolation=cv2.INTER_NEAREST)
             is_black = (missing_img[:, :, 0] == 0) & (missing_img[:, :, 1] == 0) & (missing_img[:, :, 2] == 0)
             num_l, labels, stats, centroids = cv2.connectedComponentsWithStats(is_black.astype(np.uint8))
             for i in range(1, num_l):
@@ -328,6 +354,8 @@ def process_page_data(
                 if barea > 100 and bw >= 15 and bh >= 15:
                     bcx = int(centroids[i][0])
                     bcy = int(centroids[i][1])
+                    if any(abs(m["cx"] - bcx) < 40 and abs(m["cy"] - bcy) < 40 for m in markers):
+                        continue
                     bline_idx = int((bcy - y_min) / line_height)
                     bline_idx = max(0, min(num_lines - 1, bline_idx))
                     markers.append({
@@ -371,10 +399,10 @@ def process_page_data(
             "x_max": x_max,
             "y_max": y_max,
             "normalized": {
-                "x_min": padding_bounds[0],
-                "y_min": padding_bounds[1],
-                "x_max": padding_bounds[2],
-                "y_max": padding_bounds[3]
+                "x_min": round(x_min / W, 4),
+                "y_min": round(y_min / H, 4),
+                "x_max": round(x_max / W, 4),
+                "y_max": round(y_max / H, 4)
             }
         },
         "lines_count": num_lines,
@@ -393,9 +421,9 @@ def process_page_data(
 
 
 def run_pipeline(
-    pdf_path: str = "ALSHAZLY__ALGZAER__WARSH.pdf",
-    template_path: str = "template_ring.png",
-    hollow_bitmask_path: str = "template_ring_hollow_bitmask.png",
+    pdf_path: str = "Mushaf-Ashathili.pdf",
+    template_path: str = "template_ring_new.png",
+    hollow_bitmask_path: str = "template_ring_hollow_bitmask_new.png",
     header_template_path: str = "template_surah_header.png",
     output_dir: str = "output",
     start_page: int = 0,
@@ -546,14 +574,16 @@ def run_pipeline(
                 full_stats["empty_pages"] += 1
 
     consolidated_path = out_dir / "mushaf_ayah_masks.json"
-    with open(consolidated_path, "w", encoding="utf-8") as f:
+    temp_path = out_dir / "mushaf_ayah_masks.tmp"
+    with open(temp_path, "w", encoding="utf-8") as f:
         json.dump({
-            "version": "1.5.0",
-            "mushaf": "Al-Shazly Warsh (Algeria)",
+            "version": "2.0.0",
+            "mushaf": "Al-Shazly Warsh (Algeria) - High-Res Edition",
             "total_pages": len(full_pages_data),
             "stats": full_stats,
             "pages": full_pages_data
         }, f, ensure_ascii=False, indent=2)
+    temp_path.replace(consolidated_path)
 
     print("\n================ Processing Summary ================")
     print(f"Total Pages in Dataset         : {full_stats['processed_pages']}")
@@ -575,9 +605,9 @@ def run_pipeline(
 def main() -> None:
     """CLI entry point."""
     parser = argparse.ArgumentParser(description="Extract Ayah masks from Mushaf PDF")
-    parser.add_argument("--pdf", default="ALSHAZLY__ALGZAER__WARSH.pdf", help="Path to PDF")
-    parser.add_argument("--template", default="template_ring.png", help="Path to ring template")
-    parser.add_argument("--hollow-bitmask", default="template_ring_hollow_bitmask.png", help="Path to hollow bitmask")
+    parser.add_argument("--pdf", default="Mushaf-Ashathili.pdf", help="Path to PDF")
+    parser.add_argument("--template", default="template_ring_new.png", help="Path to ring template")
+    parser.add_argument("--hollow-bitmask", default="template_ring_hollow_bitmask_new.png", help="Path to hollow bitmask")
     parser.add_argument("--header-template", default="template_surah_header.png", help="Path to surah header template")
     parser.add_argument("--output", default="output", help="Output directory")
     parser.add_argument("--start", type=int, default=0, help="Start page index (0-based)")

@@ -98,9 +98,10 @@ def load_header_templates(header_template_path: str = "template_surah_header.png
         mask = np.ones(tmpl_gray.shape, dtype=np.uint8) * 255
 
     scales = []
-    # Multi-scale coverage (532 to 544 px width) including lower-contrast variants
-    for tw in [532, 538, 544]:
-        th = int(round(tw * 106.0 / 535.0))
+    # Multi-scale coverage (1354 to 1366 px width) for 1488x2207 scan
+    aspect = tmpl_gray.shape[0] / float(tmpl_gray.shape[1])
+    for tw in [1354, 1360, 1366]:
+        th = int(round(tw * aspect))
         t_res = cv2.resize(tmpl_gray, (tw, th))
         m_res = cv2.resize(mask, (tw, th))
         scales.append((tw, th, t_res, m_res))
@@ -159,6 +160,7 @@ def detect_surah_headers_full_page(
     all_boxes = np.array(all_boxes)
     idxs = np.argsort(all_boxes[:, 4])
     pick = []
+    suppress_dist = max(55.0, line_height * 0.75)
     while len(idxs) > 0:
         last = len(idxs) - 1
         i = idxs[last]
@@ -166,7 +168,7 @@ def detect_surah_headers_full_page(
         idxs = np.delete(idxs, [last])
         new_idxs = []
         for idx in idxs:
-            if abs(all_boxes[idx, 1] - all_boxes[i, 1]) > 55:
+            if abs(all_boxes[idx, 1] - all_boxes[i, 1]) > suppress_dist:
                 new_idxs.append(idx)
         idxs = np.array(new_idxs)
 

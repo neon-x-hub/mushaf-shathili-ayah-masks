@@ -4,8 +4,8 @@ High-precision bounding polygons, line segments, verse markers, and ready-to-ren
 
 Designed for frictionless integration into Quran mobile apps (**Flutter**, **Android/Kotlin**, **iOS/Swift**) and web apps (**React**, **Vue**, **SVG/Canvas**).
 
-> **Source Mushaf:** The original PDF scan is hosted on the Internet Archive:
-> 🔗 **[Internet Archive: مصحف الشاذلي الجزائري برواية ورش عن نافع](https://archive.org/details/ALSHTTTTTTTTTTTTTTTTTTTTTARSH/mode/2up)**
+> **Source Mushaf (High-Resolution Edition):** Sourced from [neon-x-hub/mushaf-shathili](https://github.com/neon-x-hub/mushaf-shathili) (`Mushaf-Ashathili.pdf`, 1488 × 2207 high-fidelity scan with uniform 46.23 px borders).
+> *Legacy Scan Reference:* Hosted on the [Internet Archive](https://archive.org/details/ALSHTTTTTTTTTTTTTTTTTTTTTARSH/mode/2up) (`ALSHAZLY__ALGZAER__WARSH.pdf`, 621 × 878).
 
 ---
 
@@ -21,14 +21,30 @@ Designed for frictionless integration into Quran mobile apps (**Flutter**, **And
 ## Dataset Highlights
 
 - **606 Total PDF Pages** processed with streaming PyMuPDF rendering (all 606 pages with active verses).
+- **High-Resolution 1488 × 2207 Scan** (5.7× more pixel density than legacy 621 × 878 scan) with uniform 46.23 px border padding on all regular pages (lines 1–15, exact 141.0 px line height without vertical drift).
 - **114 Surah Header Banners** automatically detected across lines and cleanly excluded from verse masks (Surahs 1–114, excluding the closing footer on Page 605).
 - **112 Basmala Lines** identified directly beneath headers (excluding Surah At-Tawbah on Page 186, and Surah Al-Fatihah on Page 000 where Basmala is counted as Ayah 1) and isolated from verse masks so Ayah 1 of each Surah contains only genuine verse text.
 - **13 Hollow Thumun (1/8 Hizb) Markers** identified and merged into their true parent Quranic verses, providing complete verse highlighting while exposing exact Thumun coordinates.
 - **6,236 Total Completed Verses** across all 606 pages, perfectly matching the canonical Kufi count across all 114 Surahs with 100.0% verification.
-- **Dedicated Handlers for Opening Pages 000 & 001**: Special 7-line content framing, ornamental header detection, and rosette ring matching using assets/000_mask.png and assets/001_mask.png.
+- **100% Native Marker Detection (Zero Manual Fixes)**: The high-resolution scan detects all verse markers directly. **Zero manual missing ayah masks** required (Pages 093 and 329 detected natively), and **zero heuristic predicted end-of-page markers** required (all 16 line-15 bottom-left markers are physically detected with high scores: 0.61–0.86, avg ~0.79).
+- **Dedicated Handlers for Opening Pages 000 & 001**: Special 7-line content framing, ornamental header detection, and rosette ring matching using exact calibrated bounding boxes.
 - **Resolution-Independent**: Stored both in original page coordinates and normalized ($0.0 \dots 1.0$) coordinates.
 - **Ready-to-Render SVG**: Every verse contains pre-computed SVG path strings (`svg_path` and `normalized_svg_path`) for single-element rendering.
 - **Interactive Viewer**: Open [`viewer.html`](viewer.html) in your browser to inspect overlays on sample pages immediately.
+
+---
+
+## Comparison: High-Resolution Scan vs. Legacy Scan
+
+| Feature / Metric | High-Resolution Edition (`Mushaf-Ashathili.pdf`) | Legacy Edition (`ALSHAZLY...WARSH.pdf`) | Accuracy Impact |
+| :--- | :--- | :--- | :--- |
+| **Page Dimensions** | **1488 × 2207 px** | 621 × 878 px | **+470% pixel area** (clean, crisp calligraphy & markers) |
+| **Border Geometry** | **Fixed 46.23 px uniform padding** | Variable margin drift (0.050 / 0.028) | Constant 141.0 px/line, eliminating vertical misalignment |
+| **Marker Template Match Score** | **0.80 – 0.86 average correlation** | 0.65 – 0.78 average correlation | Far greater confidence separation between markers & text |
+| **Manual Missing Ayah Patches** | **0 required** (100% natively detected) | 2 required (`093_missing_ayah.png`, `329_missing_ayah.png`) | Eliminates manual pixel-drawing hacks |
+| **Predicted End-of-Page Markers**| **0 required** (all 16 physical markers detected) | 16 heuristically synthesized markers | All line-15 verse ends are now authentic physical markers |
+| **Opening Rosette Markers** | **100% precision (0 false positives)** | Faint detection requiring manual mask guidance | 7/7 on Page 0 and 5/5 on Page 1 detected cleanly |
+| **Hollow Thumun Classification** | **13/13 detected with 100% accuracy** | 13/13 detected with lower margin | Center hole contrast is distinct (inner mean 255 vs 196) |
 
 ---
 
@@ -36,10 +52,15 @@ Designed for frictionless integration into Quran mobile apps (**Flutter**, **And
 
 ```text
 shathili-mushaf/
-├── ALSHAZLY__ALGZAER__WARSH.pdf        # Source Mushaf PDF (download from Internet Archive)
-├── template_ring.png                   # Ayah marker template
-├── template_ring_hollow_bitmask.png    # Hollow bitmask for Thumun marker detection
-├── template_surah_header.png           # Surah header banner template
+├── Mushaf-Ashathili.pdf                # Primary High-Resolution Mushaf PDF (1488 × 2207)
+├── ALSHAZLY__ALGZAER__WARSH.pdf        # Legacy Mushaf PDF (621 × 878)
+├── assets/
+│   ├── template_ring_new.png           # High-res Ayah marker template (71 × 72)
+│   ├── template_ring_hollow_bitmask_new.png # High-res bitmask for Thumun marker detection
+│   ├── template_surah_header.png       # Surah header banner template (scaled to 1360 × 271)
+│   ├── template_rosette_ring.png       # Rosette marker template for opening pages (81 × 81)
+│   ├── 000_mask.png                    # Opening frame mask for Page 000 (1488 × 2207)
+│   └── 001_mask.png                    # Opening frame mask for Page 001 (1488 × 2207)
 ├── mushaf_pipeline.py                  # High-performance batch extraction pipeline
 ├── map_surah_ayahs.py                  # Generates Surah-to-Ayah mapping & tags every Ayah
 ├── check_surah_ayah_counts.py          # Verification CLI: tests all 114 Surahs against canonical counts
@@ -67,10 +88,10 @@ Each page JSON file is self-contained and formatted as follows:
 ```json
 {
   "page_number": 71,
-  "dimensions": { "width": 621, "height": 878 },
+  "dimensions": { "width": 1488, "height": 2207 },
   "content_bounds": {
-    "x_min": 31, "y_min": 24, "x_max": 591, "y_max": 853,
-    "normalized": { "x_min": 0.050, "y_min": 0.028, "x_max": 0.952, "y_max": 0.972 }
+    "x_min": 46, "y_min": 46, "x_max": 1442, "y_max": 2161,
+    "normalized": { "x_min": 0.0309, "y_min": 0.0208, "x_max": 0.9691, "y_max": 0.9792 }
   },
   "lines_count": 15,
   "ayahs_count": 8,
@@ -87,28 +108,28 @@ Each page JSON file is self-contained and formatted as follows:
       "is_continuation_to_next_page": false,
       "has_thumun": false,
       "thumun_marker": null,
-      "compact_polygons": ["0.187%"],
+      "compact_polygons": ["f"],
       "segments": [
         {
           "line": 1,
           "start_pct": 100.0,
-          "end_pct": 0.187,
-          "x_right_norm": 0.9308,
-          "x_left_norm": 0.0692,
-          "y_top_norm": 0.0273,
-          "y_bottom_norm": 0.0900,
-          "pixel_rect": [43, 24, 578, 79]
+          "end_pct": 0.0,
+          "x_right_norm": 0.9691,
+          "x_left_norm": 0.0309,
+          "y_top_norm": 0.0208,
+          "y_bottom_norm": 0.0847,
+          "pixel_rect": [46, 46, 1442, 187]
         }
       ],
       "pixel_polygons": [
-        [[43, 24], [578, 24], [578, 79], [43, 79]]
+        [[46, 46], [1442, 46], [1442, 187], [46, 187]]
       ],
-      "svg_path": "M 43 24 L 578 24 L 578 79 L 43 79 Z",
-      "normalized_svg_path": "M 0.0692 0.0273 L 0.9308 0.0273 L 0.9308 0.0900 L 0.0692 0.0900 Z",
+      "svg_path": "M 46 46 L 1442 46 L 1442 187 L 46 187 Z",
+      "normalized_svg_path": "M 0.0309 0.0208 L 0.9691 0.0208 L 0.9691 0.0847 L 0.0309 0.0847 Z",
       "marker": {
-        "cx": 60, "cy": 52, "w": 35, "h": 37,
-        "cx_norm": 0.0966, "cy_norm": 0.0592,
-        "line": 1, "score": 0.65,
+        "cx": 103, "cy": 120, "w": 71, "h": 72,
+        "cx_norm": 0.0692, "cy_norm": 0.0544,
+        "line": 1, "score": 0.8212,
         "is_predicted": false,
         "is_hollow": false,
         "type": "ayah"
@@ -254,12 +275,14 @@ python mushaf_pipeline.py --start 70 --end 75 --save-overlays --output output
 ```
 
 ### CLI Arguments:
-- `--pdf`: Path to Mushaf PDF (default: `ALSHAZLY__ALGZAER__WARSH.pdf`).
-- `--template`: Path to marker ring template (default: `template_ring.png`).
+- `--pdf`: Path to Mushaf PDF (default: `Mushaf-Ashathili.pdf`).
+- `--template`: Path to marker ring template (default: `template_ring_new.png`).
+- `--hollow-bitmask`: Path to hollow bitmask (default: `template_ring_hollow_bitmask_new.png`).
+- `--header-template`: Path to surah header template (default: `template_surah_header.png`).
 - `--output`: Output directory (default: `output`).
 - `--start`: Start page index (default: `0`).
 - `--end`: End page index (default: `-1` for all pages).
-- `--threshold`: Match threshold (default: `0.58`).
+- `--threshold`: Match threshold (default: `0.50`).
 - `--save-overlays`: Render visual `.jpg` overlays into `output/overlays/`.
 - `--no-overwrite`: Skip pages that already have JSON files generated.
 

@@ -1,6 +1,14 @@
-# Mushaf Source PDF (download separately from Internet Archive: https://archive.org/details/ALSHTTTTTTTTTTTTTTTTTTTTTARSH/mode/2up)
+# Mushaf Source PDF (download separately from GitHub Releases or Internet Archive)
 *.pdf
 ALSHAZLY__ALGZAER__WARSH.pdf
+Mushaf-Ashathili.pdf
+
+# Large Consolidated Dataset Outputs (distributed via GitHub Releases, see package_release.py)
+output/mushaf_ayah_masks.json
+output/surah_ayah_mapping.json
+output/*.gz
+output/*.zip
+output/*.tmp
 
 # Generated Visual Overlays (batch generated via generate_all_overlays.py)
 output/overlays/
@@ -11,6 +19,7 @@ archive/
 scratch/
 scratch_*
 *.tmp
+assets/*_old.png
 
 # Python artifacts
 __pycache__/

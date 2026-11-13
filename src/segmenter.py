@@ -237,13 +237,15 @@ def segment_ayahs_on_page(
         has_thumun = len(matched_thumuns) > 0
 
         if final_segments:
-            pred_cx = x_min + 18
+            ref_w = ayah_markers[0]["w"] if ayah_markers else 71
+            ref_h = ayah_markers[0]["h"] if ayah_markers else 72
+            pred_cx = x_min + ref_w // 2
             pred_cy = int(y_min + (num_lines - 0.5) * line_height)
             predicted_marker = {
                 "cx": pred_cx,
                 "cy": pred_cy,
-                "w": 35,
-                "h": 37,
+                "w": ref_w,
+                "h": ref_h,
                 "cx_norm": round(pred_cx / W, 4),
                 "cy_norm": round(pred_cy / H, 4),
                 "line": num_lines,
