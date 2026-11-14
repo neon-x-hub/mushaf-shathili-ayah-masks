@@ -1,5 +1,10 @@
 # Al-Shazly Warsh Mushaf: Ayah Masks & Coordinates Dataset | مصحف الشاذلي برواية ورش: إحداثيات ومحددات الآيات القرآنية
 
+[![Online Viewer](https://img.shields.io/badge/Online%20Viewer-GitHub%20Pages-0284c7?style=flat-square&logo=github&logoColor=white)](https://neon-x-hub.github.io/mushaf-shathili-ayah-masks/viewer/)
+[![Release v2.0.0](https://img.shields.io/badge/release-v2.0.0-059669?style=flat-square)](https://github.com/neon-x-hub/mushaf-shathili-ayah-masks/releases/tag/v2.0.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![Verification: 100%](https://img.shields.io/badge/Ayah%20Count-6236%20%2F%206236%20(100%25)-blue?style=flat-square)](check_surah_ayah_counts.py)
+
 High-precision bounding polygons, line segments, verse markers, and ready-to-render SVG paths for every Ayah in the **Al-Shazly Warsh Mushaf** (Algeria edition, 15 lines/page).
 
 Designed for frictionless integration into Quran mobile apps (**Flutter**, **Android/Kotlin**, **iOS/Swift**) and web apps (**React**, **Vue**, **SVG/Canvas**).
@@ -30,7 +35,7 @@ Designed for frictionless integration into Quran mobile apps (**Flutter**, **And
 - **Dedicated Handlers for Opening Pages 000 & 001**: Special 7-line content framing, ornamental header detection, and rosette ring matching using exact calibrated bounding boxes.
 - **Resolution-Independent**: Stored both in original page coordinates and normalized ($0.0 \dots 1.0$) coordinates.
 - **Ready-to-Render SVG**: Every verse contains pre-computed SVG path strings (`svg_path` and `normalized_svg_path`) for single-element rendering.
-- **Interactive Viewer**: Run a local HTTP server and open [`viewer/index.html`](viewer/index.html) to interactively inspect and debug verse overlays, segments, markers, headers, and Basmalas across all 606 pages.
+- **Interactive Viewer**: Run locally or explore live on [GitHub Pages](https://neon-x-hub.github.io/mushaf-shathili-ayah-masks/viewer/) ([`viewer/index.html`](viewer/index.html)) to interactively inspect and debug verse overlays, segments, markers, headers, and Basmalas across all 606 pages.
 
 ---
 
@@ -310,9 +315,17 @@ python mushaf_pipeline.py --start 70 --end 75 --save-overlays --output output
 
 An interactive web viewer is provided in [`viewer/index.html`](viewer/index.html) to visually inspect and debug Ayah bounding masks, segments, marker rings, Surah headers, Basmalas, and Thumun markers against the high-resolution Mushaf page scans across all 606 pages.
 
+### 🌐 Live Online Viewer (GitHub Pages)
+
+You can access and test the viewer directly in your browser without local setup:
+
+👉 **[Launch Online Mushaf Overlay Viewer](https://neon-x-hub.github.io/mushaf-shathili-ayah-masks/viewer/)**
+
+*(Direct URL: `https://neon-x-hub.github.io/mushaf-shathili-ayah-masks/viewer/`)*
+
 ![Interactive Overlay Viewer](docs/assets/viewer.png)
 
-### Running the Viewer
+### Running the Viewer Locally
 
 Because the viewer fetches the page JSON files dynamically (from `output/pages/*.json`), it must be served over HTTP rather than opened directly via `file://`.
 
