@@ -30,7 +30,7 @@ Designed for frictionless integration into Quran mobile apps (**Flutter**, **And
 - **Dedicated Handlers for Opening Pages 000 & 001**: Special 7-line content framing, ornamental header detection, and rosette ring matching using exact calibrated bounding boxes.
 - **Resolution-Independent**: Stored both in original page coordinates and normalized ($0.0 \dots 1.0$) coordinates.
 - **Ready-to-Render SVG**: Every verse contains pre-computed SVG path strings (`svg_path` and `normalized_svg_path`) for single-element rendering.
-- **Interactive Viewer**: Open [`viewer.html`](viewer.html) in your browser to inspect overlays on sample pages immediately.
+- **Interactive Viewer**: Run a local HTTP server and open [`viewer/index.html`](viewer/index.html) to interactively inspect and debug verse overlays, segments, markers, headers, and Basmalas across all 606 pages.
 
 ---
 
@@ -82,7 +82,8 @@ shathili-mushaf/
 ├── check_surah_ayah_counts.py          # Verification CLI: tests all 114 Surahs against canonical counts
 ├── generate_all_overlays.py            # Generates visual debug JPEG overlays for all pages
 ├── package_release.py                  # Packages release archives (.json.gz, pages.zip) for GitHub Releases
-├── viewer.html                         # Interactive HTML/SVG demo viewer (zero-dependency)
+├── viewer/
+│   └── index.html                      # Interactive web viewer for inspecting overlays
 ├── output/
 │   ├── pages/                          # Per-page JSON files (000.json to 605.json) [tracked in git]
 │   │   ├── 000.json
@@ -302,6 +303,43 @@ python mushaf_pipeline.py --start 70 --end 75 --save-overlays --output output
 - `--threshold`: Match threshold (default: `0.50`).
 - `--save-overlays`: Render visual `.jpg` overlays into `output/overlays/`.
 - `--no-overwrite`: Skip pages that already have JSON files generated.
+
+---
+
+## Interactive Overlay Viewer
+
+An interactive web viewer is provided in [`viewer/index.html`](viewer/index.html) to visually inspect and debug Ayah bounding masks, segments, marker rings, Surah headers, Basmalas, and Thumun markers against the high-resolution Mushaf page scans across all 606 pages.
+
+![Interactive Overlay Viewer](docs/assets/viewer.png)
+
+### Running the Viewer
+
+Because the viewer fetches the page JSON files dynamically (from `output/pages/*.json`), it must be served over HTTP rather than opened directly via `file://`.
+
+Run a local HTTP server from the root of the repository:
+
+```bash
+# Using Python
+python -m http.server 8000
+```
+
+or with Node.js:
+
+```bash
+# Using npx serve / http-server
+npx serve .
+```
+
+Then open your browser at:
+```text
+http://localhost:8000/viewer/index.html
+```
+
+### Viewer Features:
+- **Layer Toggles**: Switch Ayahs, Segments, Markers, Headers, Basmalas, and Thumun indicators on or off.
+- **Overlay Opacity & Zoom**: Fine-tune transparency and zoom in/out or fit to screen.
+- **Interactive Inspector**: Hover or click any Ayah to view its metadata (lines, segments count, marker score, continuation flag).
+- **Keyboard Navigation**: Use <kbd>←</kbd> and <kbd>→</kbd> arrow keys to navigate pages, or <kbd>Home</kbd> / <kbd>End</kbd> to jump to the first or last page.
 
 ---
 
