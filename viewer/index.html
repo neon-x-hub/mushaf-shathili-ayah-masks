@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Shazly Mushaf — Overlay Viewer</title>
+<style>
+  :root {
+    --bg: #0b0f16;
+    --surface: #101722;
+    --card: #0d1420;
+    --raised: #18212f;
+    --line: rgba(230, 237, 247, 0.08);
+    --text: #e6edf7;
+    --text-2: #a7b4c6;
+    --muted: #7f8da2;
+    --accent: #38bdf8;
+    --radius-card: 12px;
+    --radius-control: 8px;
+    --radius-tag: 6px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  button { font: inherit; color: inherit; }
+
+  /* ---------- Header ---------- */
+  .topbar {
+    height: 56px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+  .brand-name { font-size: 14px; font-weight: 500; white-space: nowrap; }
+  .brand-sub { font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+  .pager {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .icon-btn, .text-btn {
+    height: 32px;
+    min-width: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-control);
+    color: var(--text-2);
+    cursor: pointer;
+    transition: background-color 140ms var(--ease), color 140ms var(--ease), border-color 140ms var(--ease);
+  }
+  .text-btn { padding: 0 12px; font-size: 13px; }
+  .icon-btn:hover, .text-btn:hover { background: var(--raised); color: var(--text); }
+  .icon-btn:active, .text-btn:active { transform: scale(0.97); }
+  .icon-btn:disabled, .text-btn:disabled { opacity: 0.3; cursor: default; background: transparent; color: var(--text-2); }
+  .icon-btn svg, .text-btn svg { width: 16px; height: 16px; stroke-width: 1.5; }
+
+  .page-field {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 0 4px 0 8px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-control);
+    background: var(--card);
+    height: 32px;
+  }
+  .page-field:focus-within { border-color: var(--accent); }
+  #pageInput {
+    width: 48px;
+    height: 30px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    color: var(--text);
+    font: 500 14px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    -moz-appearance: textfield;
+  }
+  #pageInput::-webkit-outer-spin-button,
+  #pageInput::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  #pageInput:focus { outline: none; }
+  .page-of {
+    font: 400 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .zoom { display: flex; align-items: center; gap: 4px; }
+
+  /* ---------- Layer toolbar ---------- */
+  .toolbar {
+    height: 44px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .toolbar::-webkit-scrollbar { display: none; }
+  .toolbar-label { font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+  .tags { display: flex; align-items: center; gap: 6px; }
+  .tag {
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 10px;
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-tag);
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 140ms var(--ease), border-color 140ms var(--ease), color 140ms var(--ease);
+  }
+  .tag:hover { color: var(--text-2); border-color: rgba(230, 237, 247, 0.16); }
+  .tag[aria-pressed="true"] {
+    background: var(--raised);
+    border-color: transparent;
+    color: var(--text);
+  }
+  .tag-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background: var(--dot);
+    opacity: 0.45;
+    transition: opacity 140ms var(--ease);
+  }
+  .tag[aria-pressed="true"] .tag-dot { opacity: 1; }
+
+  .opacity {
+    margin-inline-start: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .opacity span { font-size: 12px; color: var(--muted); }
+  .opacity input[type="range"] {
+    width: 88px;
+    accent-color: var(--accent);
+    margin: 0;
+  }
+  .opacity-val {
+    width: 34px;
+    text-align: right;
+    font: 400 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--text-2);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- Viewer ---------- */
+  main { flex: 1; display: flex; min-height: 0; }
+
+  #scrollArea {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px;
+    background: var(--bg);
+  }
+  #stage {
+    position: relative;
+    aspect-ratio: 1488 / 2207;
+    flex: none;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  }
+  #pageImg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  #overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  #overlay .ayah {
+    pointer-events: all;
+    cursor: pointer;
+    transition: fill-opacity 140ms var(--ease), stroke 140ms var(--ease);
+  }
+  #overlay .ayah:hover,
+  #overlay .ayah.active {
+    fill-opacity: 0.38 !important;
+    stroke: #fbbf24 !important;
+    stroke-width: 2.5 !important;
+  }
+
+  #status {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    background: rgba(11, 15, 22, 0.94);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-control);
+    padding: 8px 12px;
+    color: var(--text-2);
+    font-size: 13px;
+    display: none;
+    z-index: 20;
+  }
+  #status.show { display: block; }
+  #status.error { color: #fca5a5; border-color: rgba(252, 165, 165, 0.35); }
+
+  /* ---------- Sidebar ---------- */
+  aside {
+    width: 260px;
+    flex: none;
+    background: var(--surface);
+    border-inline-start: 1px solid var(--line);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    padding: 16px;
+  }
+  .card h2 {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+  }
+  .stat-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    height: 28px;
+    font-size: 13px;
+  }
+  .stat-row span { color: var(--text-2); }
+  .stat-row b {
+    font: 400 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+    font-weight: 400;
+    color: var(--text);
+  }
+  
+  #ayahInfo { min-height: 64px; font-size: 13px; color: var(--muted); }
+  #ayahInfo .big { display: block; margin-bottom: 4px; color: #fbbf24; font-size: 14px; font-weight: 500; }
+  #ayahInfo div { padding: 1px 0; }
+  #ayahInfo b { color: var(--text-2); font-weight: 400; }
+
+  .hint { font-size: 12px; line-height: 1.7; color: var(--muted); }
+  kbd {
+    display: inline-block;
+    min-width: 20px;
+    padding: 1px 5px;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font: 400 11px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--text-2);
+    text-align: center;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 1040px) {
+    .brand-sub { display: none; }
+    .opacity span:first-child { display: none; }
+  }
+  @media (max-width: 860px) {
+    aside { display: none; }
+    .topbar { gap: 8px; }
+    .pager { margin-inline: 0 auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-name">Mushaf Shathili</span>
+    <span class="brand-sub">Dataset overlay</span>
+  </div>
+
+  <nav class="pager" aria-label="Page navigation">
+    <button class="icon-btn" id="firstBtn" aria-label="First page" title="First page (Home)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17-5-5 5-5"/><path d="m18 17-5-5 5-5"/></svg>
+    </button>
+    <button class="icon-btn" id="prevBtn" aria-label="Previous page" title="Previous page (←)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <label class="page-field">
+      <input type="number" id="pageInput" min="1" max="606" value="1" aria-label="Page number">
+      <span class="page-of">/ 606</span>
+    </label>
+    <button class="icon-btn" id="nextBtn" aria-label="Next page" title="Next page (→)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+    <button class="icon-btn" id="lastBtn" aria-label="Last page" title="Last page (End)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
+    </button>
+  </nav>
+
+  <div class="zoom" role="group" aria-label="Zoom">
+    <button class="icon-btn" id="zoomOut" aria-label="Zoom out" title="Zoom out">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+    </button>
+    <button class="text-btn" id="zoomFit" title="Fit to window">Fit</button>
+    <button class="icon-btn" id="zoomIn" aria-label="Zoom in" title="Zoom in">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <span class="toolbar-label">Layers</span>
+  <div class="tags" role="group" aria-label="Overlay layers">
+    <button class="tag" data-layer="ayahs" aria-pressed="true"><i class="tag-dot" style="--dot:#38bdf8"></i>Ayahs</button>
+    <button class="tag" data-layer="markers" aria-pressed="true"><i class="tag-dot" style="--dot:#ef4444"></i>Markers</button>
+    <button class="tag" data-layer="segments" aria-pressed="false"><i class="tag-dot" style="--dot:#e879f9"></i>Lines</button>
+    <button class="tag" data-layer="headers" aria-pressed="true"><i class="tag-dot" style="--dot:#f59e0b"></i>Headers</button>
+    <button class="tag" data-layer="basmalas" aria-pressed="true"><i class="tag-dot" style="--dot:#22c55e"></i>Basmalas</button>
+    <button class="tag" data-layer="thumun" aria-pressed="true"><i class="tag-dot" style="--dot:#a78bfa"></i>Thumun</button>
+  </div>
+  <div class="opacity">
+    <span>Opacity</span>
+    <input type="range" id="opacity" min="0" max="100" value="30" aria-label="Overlay opacity">
+    <span class="opacity-val" id="opacityVal">30%</span>
+  </div>
+</div>
+
+<main>
+  <div id="scrollArea">
+    <div id="stage">
+      <img id="pageImg" alt="Mushaf page" draggable="false">
+      <svg id="overlay" viewBox="0 0 1488 2207" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <div id="status" role="status"></div>
+    </div>
+  </div>
+
+  <aside>
+    <div class="card">
+      <h2>Page</h2>
+      <div class="stat-row"><span>Number</span><b id="sPage">—</b></div>
+      <div class="stat-row"><span>Data file</span><b id="sData">—</b></div>
+      <div class="stat-row"><span>PNG file</span><b id="sPng">—</b></div>
+      <div class="stat-row"><span>Lines</span><b id="sLines">—</b></div>
+      <div class="stat-row"><span>Ayahs</span><b id="sAyahs">—</b></div>
+      <div class="stat-row"><span>Headers</span><b id="sHeaders">—</b></div>
+      <div class="stat-row"><span>Basmalas</span><b id="sBasmalas">—</b></div>
+      <div class="stat-row"><span>Thumun</span><b id="sThumun">—</b></div>
+    </div>
+
+    <div class="card">
+      <h2>Ayah</h2>
+      <div id="ayahInfo" aria-live="polite">Hover or click a verse on the page.</div>
+    </div>
+
+    <div class="card">
+      <h2>Navigation</h2>
+      <div class="hint">
+        <kbd>←</kbd> <kbd>→</kbd> page<br>
+        <kbd>Home</kbd> <kbd>End</kbd> first / last
+      </div>
+    </div>
+  </aside>
+</main>
+
+<script>
+  const TOTAL = 606;             // displayed pages 1..606 (Al-Fatihah = page 1)
+  const IMG_OFFSET = 3;          // display page 1 -> pngs/page0004.png
+  const W = 1488, H = 2207;
+
+  const els = {
+    img: document.getElementById('pageImg'),
+    svg: document.getElementById('overlay'),
+    stage: document.getElementById('stage'),
+    scroll: document.getElementById('scrollArea'),
+    status: document.getElementById('status'),
+    input: document.getElementById('pageInput'),
+    prev: document.getElementById('prevBtn'),
+    next: document.getElementById('nextBtn'),
+    first: document.getElementById('firstBtn'),
+    last: document.getElementById('lastBtn'),
+    ayahInfo: document.getElementById('ayahInfo'),
+  };
+
+  const pad = (n, len) => String(n).padStart(len, '0');
+  const dataPage = (p) => p - 1;
+  const pngName = (p) => `page${pad(p + IMG_OFFSET, 4)}.png`;
+  const dataName = (p) => `${pad(dataPage(p), 3)}.json`;
+  const SCAN_BASE = new URLSearchParams(location.search).get('scans')
+    || 'https://raw.githubusercontent.com/neon-x-hub/mushaf-shathili/main/pngs';
+  const pngSrc = (p) => `${SCAN_BASE.replace(/\/$/, '')}/${pngName(p)}`;
+  const jsonSrc = (p) => `../output/pages/${dataName(p)}`;
+
+  const cache = new Map();
+  let current = 1;
+  let data = null;
+  let selected = null;
+  let zoom = 1;
+  let reqSeq = 0;
+
+  const isOn = (name) =>
+    document.querySelector(`.tag[data-layer="${name}"]`).getAttribute('aria-pressed') === 'true';
+  const layers = {
+    ayahs: () => isOn('ayahs'),
+    markers: () => isOn('markers'),
+    segments: () => isOn('segments'),
+    headers: () => isOn('headers'),
+    basmalas: () => isOn('basmalas'),
+    thumun: () => isOn('thumun'),
+  };
+  const opacity = () => Number(document.getElementById('opacity').value) / 100;
+
+  function setStatus(msg, isError = false) {
+    els.status.textContent = msg || '';
+    els.status.className = msg ? 'show' + (isError ? ' error' : '') : '';
+  }
+
+  async function getData(page) {
+    if (cache.has(page)) return cache.get(page);
+    const res = await fetch(jsonSrc(page), { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status} for ${jsonSrc(page)}`);
+    const json = await res.json();
+    cache.set(page, json);
+    return json;
+  }
+
+  function el(tag, attrs) {
+    const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    for (const k in attrs) node.setAttribute(k, attrs[k]);
+    return node;
+  }
+
+  function draw(data) {
+    const svg = els.svg;
+    svg.innerHTML = '';
+    const op = opacity();
+
+    if (layers.ayahs()) {
+      const g = el('g', {});
+      for (const a of data.ayahs) {
+        const p = el('path', {
+          d: a.svg_path,
+          fill: '#38bdf8',
+          'fill-opacity': op * 0.45,
+          stroke: '#38bdf8',
+          'stroke-opacity': 0.55,
+          'stroke-width': 1.2,
+          class: 'ayah',
+        });
+        p.dataset.ayah = a.ayah_index;
+        p.addEventListener('mouseenter', () => showAyah(a));
+        p.addEventListener('mouseleave', () => { if (selected === null) clearAyah(); });
+        p.addEventListener('click', () => selectAyah(a));
+        g.appendChild(p);
+        if (selected === a.ayah_index) p.classList.add('active');
+      }
+      svg.appendChild(g);
+    }
+
+    if (layers.segments()) {
+      const g = el('g', {});
+      for (const a of data.ayahs) {
+        for (const s of a.segments || []) {
+          const [x1, y1, x2, y2] = s.pixel_rect;
+          g.appendChild(el('rect', {
+            x: x1, y: y1, width: x2 - x1, height: y2 - y1,
+            fill: 'none', stroke: '#e879f9', 'stroke-width': 1.5,
+            'stroke-dasharray': '8 6', 'stroke-opacity': 0.85,
+          }));
+        }
+      }
+      svg.appendChild(g);
+    }
+
+    if (layers.headers()) {
+      const g = el('g', {});
+      for (const h of data.headers || []) {
+        g.appendChild(el('rect', {
+          x: h.x_left, y: h.y_top, width: h.x_right - h.x_left, height: h.y_bottom - h.y_top,
+          fill: '#f59e0b', 'fill-opacity': op * 0.28, stroke: '#f59e0b',
+          'stroke-width': 2, 'stroke-dasharray': '14 6',
+        }));
+      }
+      svg.appendChild(g);
+    }
+
+    if (layers.basmalas()) {
+      const g = el('g', {});
+      for (const b of data.basmalas || []) {
+        const [x1, y1, x2, y2] = b.pixel_rect;
+        g.appendChild(el('rect', {
+          x: x1, y: y1, width: x2 - x1, height: y2 - y1,
+          fill: '#22c55e', 'fill-opacity': op * 0.22, stroke: '#22c55e',
+          'stroke-width': 2, 'stroke-dasharray': '14 6',
+        }));
+      }
+      svg.appendChild(g);
+    }
+
+    if (layers.markers()) {
+      const g = el('g', {});
+      for (const a of data.ayahs) {
+        const m = a.marker;
+        if (!m) continue;
+        g.appendChild(el('circle', {
+          cx: m.cx, cy: m.cy, r: Math.max(m.w, m.h) / 2,
+          fill: a.is_continuation_to_next_page ? 'rgba(251,191,36,.45)' : 'rgba(239,68,68,.35)',
+          stroke: a.is_continuation_to_next_page ? '#fbbf24' : '#ef4444',
+          'stroke-width': 2,
+        }));
+      }
+      svg.appendChild(g);
+    }
+
+    if (layers.thumun()) {
+      const g = el('g', {});
+      for (const t of data.thumun_markers || []) {
+        g.appendChild(el('circle', {
+          cx: t.cx, cy: t.cy, r: Math.max(t.w, t.h) / 2,
+          fill: 'rgba(167,139,250,.35)', stroke: '#a78bfa', 'stroke-width': 2,
+        }));
+      }
+      svg.appendChild(g);
+    }
+  }
+
+  function showAyah(a) {
+    els.ayahInfo.innerHTML = `
+      <span class="big">Ayah ${a.ayah_index}</span>
+      <div>Lines <b>${a.start_line}–${a.end_line}</b></div>
+      <div>Segments <b>${(a.segments || []).length}</b></div>
+      <div>Marker score <b>${a.marker ? a.marker.score.toFixed(3) : '—'}</b></div>
+      <div>Continues <b>${a.is_continuation_to_next_page ? 'yes' : 'no'}</b></div>
+      ${a.has_thumun ? '<div>Contains <b>thumun</b> marker</div>' : ''}`;
+  }
+  function clearAyah() { els.ayahInfo.innerHTML = 'Hover or click a verse on the page.'; }
+
+  function selectAyah(a) {
+    selected = selected === a.ayah_index ? null : a.ayah_index;
+    els.svg.querySelectorAll('.ayah').forEach((n) => {
+      n.classList.toggle('active', Number(n.dataset.ayah) === selected);
+    });
+    if (selected === null) clearAyah(); else showAyah(a);
+  }
+
+  function updateMeta() {
+    const p = current;
+    els.input.value = p;
+    els.prev.disabled = p === 1;
+    els.next.disabled = p >= TOTAL;
+    els.first.disabled = p === 1;
+    els.last.disabled = p >= TOTAL;
+
+    document.getElementById('sPage').textContent = p;
+    document.getElementById('sData').textContent = dataName(p);
+    document.getElementById('sPng').textContent = pngName(p);
+    document.getElementById('sLines').textContent = data ? data.lines_count : '—';
+    document.getElementById('sAyahs').textContent = data ? data.ayahs_count : '—';
+    document.getElementById('sHeaders').textContent = data ? data.headers_count : '—';
+    document.getElementById('sBasmalas').textContent = data ? data.basmalas_count : '—';
+    document.getElementById('sThumun').textContent = data ? data.thumun_count : '—';
+  }
+
+  function layout() {
+    const availW = els.scroll.clientWidth - 48;
+    const availH = els.scroll.clientHeight - 48;
+    const fitW = Math.min(availW, availH * (W / H));
+    els.stage.style.width = Math.max(120, Math.round(fitW * zoom)) + 'px';
+  }
+
+  async function go(page) {
+    page = Math.max(1, Math.min(TOTAL, Math.round(Number(page)) || 1));
+    current = page;
+    selected = null;
+    clearAyah();
+    updateMeta();
+    history.replaceState(null, '', `#${page}`);
+
+    const seq = ++reqSeq;
+    setStatus('Loading page…');
+
+    const img = new Image();
+    img.onload = () => {
+      if (seq !== reqSeq) return;
+      els.img.src = img.src;
+      els.img.alt = `Mushaf page ${page}`;
+      setStatus('');
+    };
+    img.onerror = () => {
+      if (seq !== reqSeq) return;
+      setStatus(`Image missing: ${pngName(page)}`, true);
+    };
+    img.src = pngSrc(page);
+
+    try {
+      const json = await getData(page);
+      if (seq !== reqSeq) return;
+      data = json;
+      draw(data);
+      updateMeta();
+      preload(page + 1);
+    } catch (err) {
+      if (seq !== reqSeq) return;
+      data = null;
+      els.svg.innerHTML = '';
+      setStatus(String(err.message || err), true);
+      updateMeta();
+    }
+  }
+
+  function preload(page) {
+    if (page < 1 || page > TOTAL) return;
+    new Image().src = pngSrc(page);
+    if (!cache.has(page)) getData(page).catch(() => {});
+  }
+
+  els.prev.addEventListener('click', () => go(current - 1));
+  els.next.addEventListener('click', () => go(current + 1));
+  els.first.addEventListener('click', () => go(1));
+  els.last.addEventListener('click', () => go(TOTAL));
+
+  els.input.addEventListener('change', () => go(els.input.value));
+  els.input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); go(els.input.value); els.input.blur(); }
+  });
+
+  document.querySelectorAll('.tag').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const on = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!on));
+      if (data) draw(data);
+    });
+  });
+
+  document.getElementById('opacity').addEventListener('input', (e) => {
+    document.getElementById('opacityVal').textContent = `${e.target.value}%`;
+    if (data) draw(data);
+  });
+
+  document.getElementById('zoomIn').addEventListener('click', () => { zoom = Math.min(3, zoom + 0.15); layout(); });
+  document.getElementById('zoomOut').addEventListener('click', () => { zoom = Math.max(0.4, zoom - 0.15); layout(); });
+  document.getElementById('zoomFit').addEventListener('click', () => { zoom = 1; layout(); });
+
+  window.addEventListener('resize', layout);
+  window.addEventListener('hashchange', () => {
+    const p = parseInt(location.hash.replace('#', ''), 10);
+    if (Number.isFinite(p) && p !== current) go(p);
+  });
+  window.addEventListener('keydown', (e) => {
+    if (e.target.matches('input, select, textarea')) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); }
+    else if (e.key === 'Home') { e.preventDefault(); go(1); }
+    else if (e.key === 'End') { e.preventDefault(); go(TOTAL); }
+  });
+
+  layout();
+  const hashPage = parseInt(location.hash.replace('#', ''), 10);
+  go(Number.isFinite(hashPage) ? hashPage : 1);
+</script>
+</body>
+</html>
